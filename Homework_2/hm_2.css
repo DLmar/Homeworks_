@@ -1,0 +1,31 @@
+body{
+    background-color: silver;
+}
+.description{
+    text-align: justify;
+    background-color: darkgoldenrod;
+}
+img{
+    border: 20px solid darkred;
+    width: 300px;
+    height: 300px;
+}
+.title1{
+    background-color: violet;
+    text-align: center;
+    color: white;
+}
+.title2{
+    background-color: darkgreen;
+    text-align: center;
+    color: lime;
+}
+.ol-description{
+    text-align: center;
+    background-color: midnightblue;
+    color: aqua;
+}
+.today{
+    text-align: start;
+    color: deeppink;
+}
