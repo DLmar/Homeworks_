@@ -1,0 +1,42 @@
+.father{
+    width: 800px;
+    height: 300px;
+    background-color: deepskyblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid darkred;
+}
+.son{
+    border-radius: 50%;
+    width: 25%;
+    height: 25%;
+    background-color: firebrick;
+    box-shadow: maroon 50px 32px 100px;
+}
+.text1{
+    font-size: large;
+    color: aliceblue;
+    text-align: center;
+}
+.neighbor_below{
+    background-color: gold;
+    width: 800px;
+    height: 300px;
+    border: 5px solid darkred;
+    display: flex;
+}
+.sunday{
+    color:deeppink;
+    text-align: center;
+}
+.day{
+    width: 100px;
+    background-color: purple;
+    justify-content: center;
+    align-items: center;
+}
+.day_{
+    text-align: center;
+    color: snow;
+}
