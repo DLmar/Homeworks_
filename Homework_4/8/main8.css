@@ -1,0 +1,123 @@
+.one{
+    width: 500px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: darkseagreen;
+}
+.l{
+    width: 100px;
+    height: 30px;
+    background-color: maroon;
+    margin: 25px;
+}
+.two{
+    display: flex;
+    flex-direction: column;
+    background-color: darkseagreen;
+    align-items: center;
+    width: 150px;
+    height: 800px;
+    row-gap: 10px;
+}
+.r{
+    width: 100px;
+    height: 30px;
+    background-color: maroon;
+}
+.box9{
+    width: 300px;
+    height: 130px;
+    background-color: maroon;
+}
+.three{
+    display: flex;
+    width: 350px;
+    height: 200px;
+    background-color: darkseagreen;
+    justify-content: center;
+    align-items: center;
+}
+.two-seven{
+    display: flex;
+}
+.three-seven{
+    display: flex;
+    flex-direction: column;
+}
+.four{
+    display: flex;
+    width: 350px;
+    height: 100px;
+    background-color: darkseagreen;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+.b{
+    width: 70px;
+    height: 50px;
+    background-color: maroon;
+}
+.five{
+    background-color: darkseagreen;
+    width: 200px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    row-gap: 5px;
+
+}
+.q{
+    width: 90px;
+    height: 50px;
+    background-color: maroon;
+}
+.five-six{
+    display: flex;
+}
+.six{
+    background-color: darkseagreen;
+    width: 150px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.y{
+    width: 90px;
+    height: 50px;
+    background-color: maroon;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.but{
+    width: 100px;
+    height: 20px;
+    background-color: maroon;
+}
+.seven{
+    background-color: darkseagreen;
+    width: 350px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.z{
+    width: 200px;
+    height: 20px;
+    background-color: maroon;
+    margin-bottom: 5px;
+}
+.h{
+    width: 50px;
+    height: 20px;
+    background-color: maroon;
+
+}
