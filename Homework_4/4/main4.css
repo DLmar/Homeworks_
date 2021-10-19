@@ -1,0 +1,28 @@
+.A {
+    width: 350px;
+    height: 100px;
+    background-color: darkgreen;
+    margin-bottom: 3px;
+}
+
+.items {
+    width: 250px;
+    height: 160px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.r {
+    width: 70px;
+    height: 70px;
+    background-color: chocolate;
+    margin: 0px 3px 3px 0px;
+}
+.H{
+    width: 100px;
+    height: 150px;
+    background-color: violet;
+}
+.flex{
+    display: flex;
+}

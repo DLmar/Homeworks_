@@ -1,0 +1,28 @@
+.header{
+    width: 600px;
+    height: 70px;
+    background-color: midnightblue;
+}
+.nav{
+    width: 600px;
+    height: 70px;
+    background-color: blue;
+}
+.main-aside{
+    display: flex;
+}
+.main{
+    width: 400px;
+    height:250px;
+    background-color: aqua;
+}
+.aside{
+    width: 200px;
+    height: 250px;
+    background-color: dodgerblue;
+}
+.footer{
+    width: 600px;
+    height: 70px;
+    background-color: darkgoldenrod;
+}

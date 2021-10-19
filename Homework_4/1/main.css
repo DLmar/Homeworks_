@@ -1,0 +1,19 @@
+.A{
+    width:800px ;
+    height: 200px;
+    background-color: purple;
+}
+.nothing{
+    display: flex;
+}
+.B{
+    width: 600px;
+    height: 250px;
+    background-color: red;
+    align-items: start;
+}
+.C{
+     width: 200px;
+     height: 250px;
+     background-color: cornflowerblue;
+ }

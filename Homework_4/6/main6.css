@@ -1,0 +1,32 @@
+.home-about{
+    display: flex;
+}
+.home  {
+    width: 200px;
+    height: 400px;
+    background-color: midnightblue;
+}
+.about{
+    width: 200px;
+    height: 400px;
+    background-color: maroon;
+    margin-left: 5px;
+}
+.kabobs{
+    width: 405px;
+    height: 200px;
+    background-color: purple;
+    margin-top: 5px;
+}
+.l{
+    width: 100px;
+    height: 100px;
+    background-color: midnightblue;
+}
+.some-space{
+    width: 400px;
+    height: 100px;
+    justify-content: space-between;
+    display: flex;
+    margin-top: 5px;
+}

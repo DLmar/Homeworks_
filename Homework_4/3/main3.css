@@ -1,0 +1,36 @@
+.A {
+    width: 405px;
+    height: 150px;
+    background-color: purple;
+    margin-bottom: 3px;
+}
+
+.B{
+    width: 300px;
+    height: 150px;
+    background-color: red;
+}
+.flex-them{
+    display: flex;
+}
+.no-no-flex{
+    display: block;
+}
+.flex{
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+.l{
+    width: 70px;
+    height: 70px;
+    background-color: midnightblue;
+    margin-top: 3px;
+}
+.F{
+    width: 100px;
+    height: 225px;
+    background-color: maroon;
+    margin-left: 5px;
+}
+
