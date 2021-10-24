@@ -1,14 +1,10 @@
 .widgets{
-    width: 400px;
-    height: 200px;
-    background-color: midnightblue;
     margin-bottom: 10px;
 }
 .items{
     width: 400px;
     display: flex;
     justify-content: space-between;
-
 }
 .one{
     width: 120px;
@@ -16,8 +12,13 @@
     background-color: blue;
     margin-bottom: 10px;
 }
-.contact{
+
+.w400 {
     width: 400px;
+}
+.h200{
     height: 200px;
+}
+.bg{
     background-color: midnightblue;
 }

@@ -1,67 +1,71 @@
+.bg{
+    background-color: darkseagreen;
+}
+.bg1{
+    background-color: maroon;
+}
+.box2{
+    width: 70px;
+    height: 50px;
+}
 .one{
-    width: 500px;
+    width: 504px;
     height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: darkseagreen;
+    border: 2px solid black;
+
 }
-.l{
+.box{
     width: 100px;
     height: 30px;
-    background-color: maroon;
     margin: 25px;
 }
 .two{
     display: flex;
     flex-direction: column;
-    background-color: darkseagreen;
     align-items: center;
     width: 150px;
     height: 800px;
     row-gap: 10px;
+    border: 2px solid black;
+
 }
-.r{
+.box1{
     width: 100px;
     height: 30px;
-    background-color: maroon;
+    margin-top: 10px;
 }
 .box9{
     width: 300px;
     height: 130px;
-    background-color: maroon;
+
 }
 .three{
     display: flex;
     width: 350px;
     height: 200px;
-    background-color: darkseagreen;
     justify-content: center;
     align-items: center;
+    border: 2px solid black;
 }
-.two-seven{
+.f-lex{
     display: flex;
 }
 .three-seven{
-    display: flex;
     flex-direction: column;
 }
 .four{
     display: flex;
     width: 350px;
     height: 100px;
-    background-color: darkseagreen;
     align-items: center;
     justify-content: space-evenly;
+    border: 2px solid black;
 
 }
-.b{
-    width: 70px;
-    height: 50px;
-    background-color: maroon;
-}
 .five{
-    background-color: darkseagreen;
     width: 200px;
     height: 400px;
     display: flex;
@@ -69,55 +73,38 @@
     justify-content: space-evenly;
     align-items: center;
     row-gap: 5px;
-
-}
-.q{
-    width: 90px;
-    height: 50px;
-    background-color: maroon;
-}
-.five-six{
-    display: flex;
+    border: 2px solid black;
 }
 .six{
-    background-color: darkseagreen;
-    width: 150px;
-    height: 400px;
+    width: 146px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    border: 2px solid black;
 }
-.y{
+.box3{
     width: 90px;
     height: 50px;
-    background-color: maroon;
     margin-top: 5px;
     margin-bottom: 5px;
 }
 .but{
     width: 100px;
     height: 20px;
-    background-color: maroon;
 }
 .seven{
-    background-color: darkseagreen;
     width: 350px;
-    height: 100px;
+    height: 20%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border: 2px solid black;
 }
-.z{
+.box4{
     width: 200px;
     height: 20px;
-    background-color: maroon;
     margin-bottom: 5px;
-}
-.h{
-    width: 50px;
-    height: 20px;
-    background-color: maroon;
-
 }
