@@ -1,0 +1,237 @@
+@media screen and (max-width: 376px) {
+    .wrapper {
+        max-width: 376px;
+        font-size: 30px;
+        line-height: 32px;
+
+    }
+
+    .first-block-photo {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .first-block-photo img {
+        width: 354px;
+        height: 355px;
+        position: absolute;
+        margin-top: 100px;
+
+    }
+
+    .text-to-photo1 {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+        align-items: center;
+    }
+
+    .text-to-photo1 h2 {
+        font-size: 40px;
+        margin-bottom: 200px;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .text-to-photo1 h2::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 227px;
+        height: 7px;
+        margin-left: 72px;
+        margin-top: 30px;
+        background-color: #EDEFF3;
+    }
+
+    .text-to-photo1 div {
+        width: 350px;
+        height: 100px;
+        margin-top: 200px;
+    }
+
+    .text-to-photo1 p::before,
+    .text-to-photo1 p::after {
+        display: none;
+    }
+
+    .second-block-photo {
+        flex-direction: column;
+    }
+
+    .second-block-photo {
+        align-items: center;
+    }
+
+    .second-block-photo img {
+        margin-top: 150px;
+        width: 414px;
+        height: 234px;
+    }
+
+    .text-to-photo2 h2 {
+        text-align: center;
+    }
+
+    .third-block-photo {
+        flex-direction: column;
+
+    }
+
+    .third-block-photo img {
+        width: 378px;
+        height: 505px;
+    }
+
+    .text-to-photo3 h2 {
+        margin-left: 10px;
+        margin-top: 30px;
+    }
+
+    .text-to-photo3 div {
+        width: 350px;
+        height: 500px;
+        margin-left: 10px;
+    }
+
+    .fourth-block {
+        flex-direction: column;
+    }
+
+    .fourth-block img {
+        position: absolute;
+        height: 300px;
+    }
+
+    .fourth-block-description {
+        margin-top: 300px;
+        margin-left: 10px;
+        width: 350px;
+
+    }
+
+    .fourth-block-description h2 {
+        width: 340px;
+        height: 40px;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .fourth-block-description p {
+        margin-top: 200px;
+    }
+
+    .fifth-block {
+
+        justify-content: center;
+        align-items: center;
+        padding-left: 10px;
+
+    }
+
+    .fifth-block h2 {
+        text-align: center;
+        padding-left: 20px;
+    }
+
+    .some-blocks {
+        width: 350px;
+        justify-content: center;
+        align-items: center;
+        column-gap: 0;
+
+    }
+
+    .a {
+        width: 350px;
+        height: 136px;
+        margin-right: 150px;
+        padding-left: 20px;
+    }
+
+    .sixth-block {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .haup-description {
+        flex-direction: column;
+
+    }
+
+    .haup-description1, .haup-description2 div {
+        width: 350px;
+        padding-left: 30px;
+    }
+
+    .haup-description1 {
+        margin-bottom: -70px;
+    }
+
+    .seventh-block {
+        padding-top: 20px;
+    }
+
+    .seventh-block h2 {
+        padding-bottom: 20px;
+    }
+
+    .bilder-photo-block {
+        width: 360px;
+        height: 479px;
+    }
+
+    .besucher {
+        font-size: 20px;
+        line-height: 40px;
+        text-align: center;
+        letter-spacing: 2.42px;
+        margin-top: -200px;
+    }
+
+    .some-5-blocks {
+        margin-top: 0;
+        row-gap: 8px;
+    }
+    .eight-block{
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 0;
+    }
+    .eight-block h2{
+        text-align: center;
+        font-size: 26px;
+        line-height: 43px;
+        letter-spacing: -0.4px;
+        margin-top: 100px;
+    }
+    .eight-block img{
+        position: absolute;
+    }
+    .eight-block p{
+        font-size: 16px;
+        line-height: 32px;
+        letter-spacing: -0.4px;
+    }
+    .eight-block div{
+        width: 350px;
+    }
+    .eight-block button{
+        align-items: center;
+        margin-left: 20px;
+    }
+    .ninth-block{
+        padding-left: 30px;
+        flex-direction: column;
+        padding-top: 10px;
+    }
+    .el p{
+        margin-top: 35px;
+    }
+    .ffff{
+        margin-top: 0;
+    }
+
+
+}
