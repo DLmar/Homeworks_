@@ -200,7 +200,7 @@
 }
 
 .input-group {
-    width: 649px;
+
     height: 53px;
 }
 
@@ -219,7 +219,7 @@
 .login__items {
     display: flex;
     margin-top: 10px;
-    width: 411px;
+
     height: 32px;
     column-gap: 20px;
 
@@ -294,7 +294,7 @@
 }
 
 .big__slider {
-    width: 1008px;
+
     height: 430px;
 }
 .big__slider_block{
@@ -331,7 +331,7 @@
 }
 
 .product_slider__price {
-    width: 400px;
+
     height: 43px;
     font-weight: 500;
     font-size: 37px;
@@ -644,7 +644,7 @@
 
 .long__line2 {
     margin-top: 25px;
-    width: 1354px;
+    width: 1000px;
     height: 1px;
     background: #E1E5F8;
 }
@@ -668,7 +668,7 @@
 
 .big__long__line {
     display: flex;
-    width: 1920px;
+    width: 1500px;
     height: 9px;
     background: #F5F5F5;
 }

@@ -360,6 +360,7 @@
     }
 
     .big__long__line{
+        width: 320px;
         display: flex;
         column-gap: 50px;
         height: 1200px;
