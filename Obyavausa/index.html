@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns:x-on="http://www.w3.org/1999/xhtml" xmlns:x-bind="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -7,15 +7,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ObyavaUSA</title>
     <link rel="stylesheet" href="./css/style.css">
+    <script src="//unpkg.com/alpinejs" defer></script>
 </head>
 <body>
 <container class="w-full m-0 p-0">
     <div class="bg-main_bg">
-        <header class="flex h-[100px] bg-white items-center bg-white justify-between">
-            <img class="mt-[33px] mb-[34px] ml-[312px]" src="./images/Obyavausa.png" width="157" height="33" alt="logo">
-            <nav class="flex items-center gap-x-2.5 mr-[312px]">
+        <header class="flex h-[100px] bg-white items-center bg-white justify-center gap-x-[500px] sm:h-[64px] xl:gap-x-[200px] lg:gap-x-[100px] md:justify-between sm:justify-between">
+            <img class=" mt-[33px] mb-[34px] xl:ml-[100px] sm:w-[109px] md:ml-2 sm:h-[23px] sm:ml-[12px]"
+                 src="./images/Obyavausa.png" width="157" height="33" alt="logo">
+            <img class=" hidden md:w-[60px] sm:w-[40px] md:block md:mr-[12px] sm:block sm:mr-[12px] md:mr-2 " src="./icons/Burger.png" alt="Menu">
+            <nav class=" flex items-center gap-x-2.5 md:hidden sm:hidden xl:mr-[100px]">
                 <div class="w-10 flex justify-center rounded-full border-[1px] border-border_color">
-                    <img class="m-[9px]" src="./icons/Chat.png" width="20" height="19" alt="chat icon">
+                    <img class="m-[9px] cursor-pointer" src="./icons/Chat.png" width="20" height="19" alt="chat icon">
                 </div>
                 <div class="w-10 flex justify-center rounded-full border-[1px] border-border_color">
                     <img class="m-[9px]" src="icons/Heart.png" width="19" height="18" alt="chat icon">
@@ -24,878 +27,1051 @@
                     <img class="m-[10px]" src="./icons/Profile.png" width="13" height="19" alt="chat icon">
                 </div>
                 <div class="flex ml-[15px] gap-x-[15px] text-main_text_color items-center">
-                    <p class="text-base font-semibold"><a href="#">Log in</a></p>
+                    <a class="text-base font-semibold flex gap-x-1" href="#"><span>Log</span><span>in</span></a>
                     <p class="bg-border_color w-px h-[30px]"></p>
-                    <p class="text-base font-semibold"><a href="#">Register</a></p>
+                    <a class="text-base font-semibold" href="#">Register</a>
                 </div>
-                <button class="w-[219px] h-[50px] ml-[40px] flex bg-button_color_header_main rounded-[5px] text-white font-semibold items-center">
+                <button class="w-[219px] h-[50px] ml-[40px] flex bg-custom_orange rounded-[5px] text-white font-semibold items-center">
                     <div class="w-[154px]">Add an advert</div>
-                    <div class="w-[65px] h-[50px] bg-button_color_header_second flex items-center justify-center rounded-[5px]">
-                        <div class="w-[2px] h-[9px] bg-white"></div>
-                        <div class="absolute w-[9px] h-[2px] bg-white"></div>
+                    <div class="block w-0 h-0 border-1-transparent border-1-[20px] border-b-custom_orange2 border-b-[50px]"></div>
+                    <div class="w-[65px] h-[50px] bg-custom_orange2 flex items-center justify-center rounded-r-[5px]">
+                        <div class="w-[2px] h-[11px] bg-white"></div>
+                        <div class="absolute w-[11px] h-[2px] bg-white"></div>
                     </div>
                 </button>
             </nav>
         </header>
-        <div class="mt-[70px] ml-[312px] mr-[312px] flex items-center justify-center flex-col">
-            <h1 class="text-center font-extrabold text-5xl text-main_text_color">
-                <div>Let us help you</div>
-                <div>find what you need!</div>
+        <div class="mt-[70px] flex justify-center items-center md:block sm:block  mt-[39px] justify-start  ">
+            <h1 class="text-center font-extrabold text-5xl text-main_text_color sm:text-[32px]">
+                <p>Let us help you</p>
+                <p>find what you need!</p>
             </h1>
         </div>
-        <div class=" mt-[40px] p-[25px] rounded-[15px] flex items-center justify-center">
-            <div class="flex gap-x-[24px] items-center justify-center bg-white w-[1076px] h-[128px] p-[25px] rounded-[15px]">
+        <div class=" mt-[40px] rounded-[15px] flex items-center justify-center sm:mt-[35px]">
+            <div class="flex gap-x-[24px] items-center justify-center bg-white w-[1076px] h-[128px] p-[25px] rounded-[15px] xl:w-[800px] xl:p-[40px] md:w-[351px] md:h-[296px] md:flex-col md:gap-x-0 sm:w-[351px] sm:h-[296px] sm:flex-col sm:gap-x-0">
                 <div>
-                    <p class="text-main_text_color font-bold">Search</p>
-                    <div class="relative ">
+                    <p class="text-main_text_color font-bold sm:mb-[10px]">Search</p>
+                    <div class="relative sm:mb-[20px]">
                         <div class="absolute">
                             <img class="w-[15.75px] h-[16.17px] ml-[18px] mt-[17px]" src="./icons/Search.png">
                         </div>
-                            <input class="w-[611px] h-[50px] bg-search_icon bg-form_color pl-[52px] rounded-[5px]"
-                                  type="search"
-                                  placeholder="11,587,223 nearby listings">
-
+                        <input class="w-[611px] h-[50px] bg-search_icon bg-form_color pl-[52px] rounded-[5px] border-[1px] border-border_color xl:w-[400px] md:w-[301px] sm:w-[301px]"
+                               type="search"
+                               placeholder="11,587,223 nearby listings">
                     </div>
                 </div>
                 <div>
-                    <p class="text-main_text_color font-bold">Location</p>
-                    <div class="relative">
+                    <p class="text-main_text_color font-bold md:mb-[10px] sm:mb-[10px]">Location</p>
+                    <div class="relative md:mb-[20px] sm:mb-[20px]">
                         <div class="absolute">
                             <img class="w-[13.75px] h-[16.05px] ml-[18px] mt-[17px]" src="./icons/LocationG.png">
                         </div>
-                        <input class="w-[306px] h-[50px] bg-search_icon bg-form_color pl-[52px] rounded-[5px]"
+                        <input class="w-[306px] h-[50px] bg-search_icon bg-form_color pl-[52px] rounded-[5px] border-[1px] border-border_color xl:w-[200px] md:w-[301px] sm:w-[301px]"
                                type="search"
                                placeholder="All of America">
                     </div>
-                    </div>
+                </div>
 
-                <div class="mt-6">
-                    <button class="w-[61px] h-[50px] bg-button_color_header_main flex items-center justify-center rounded-[5px]">
+                <div class="mt-6 md:mt-0 sm:mt-0">
+                    <button class="w-[61px] h-[50px] bg-custom_orange flex items-center justify-center rounded-[5px] md:w-[301px] sm:w-[301px]">
                         <img src="./icons/SearchWhite.png" alt="search button">
                     </button>
                 </div>
             </div>
         </div>
-        <div class="flex gap-x-[10px] text-main_text_color mb-[98px] justify-center text-base">
-            <p>Popular requests:</p>
-            <p>Generators,</p>
-            <p>Give it away for free,</p>
-            <p>Electronics,</p>
-            <p>Car</p>
+        <div class="flex gap-x-[10px] text-main_text_color mt-[17px] mb-[100px] justify-center text-base md:text-sm md:mb-[40px] md:gap-x-[5px]  sm:text-sm sm:gap-x-[5px] sm:mb-[38px]">
+            <p class="">Popular requests:</p>
+            <p class="">Generators,</p>
+            <p class="">Give it away for free,</p>
+            <p class="md:hidden sm:hidden">Electronics,</p>
+            <p class="md:hidden sm:hidden">Car</p>
         </div>
 
-        <div class="flex justify-center">
-            <div class="flex flex-wrap w-9/12 gap-[17px] text-main_text_color font-semibold text-sm text-center justify-center">
-                <div class="bg-white w-[147px] h-[130px] rounded-[20px]">
+        <div class="flex justify-center ">
+            <div class="flex flex-wrap w-9/12 gap-[17px] text-main_text_color font-semibold text-sm text-center justify-center sm:w-full sm:gap-[14px]">
+                <div class="bg-white w-[147px] h-[130px] rounded-[20px] sm:w-[107px] sm:h-[96px]">
                     <div class="flex justify-between">
-                        <img class="w-[17.42px] h-[18.33px] mt-[26.83px] ml-[22.29px] " src="./icons/Setting.png"
+                        <img class="w-[17.42px] h-[18.33px] mt-[26.83px] ml-[22.29px] sm:mt-[15px] sm:ml-[15px]"
+                             src="./icons/Setting.png"
                              alt="setting icon">
-                        <img class="w-[80px] h-[80px] rounded-tr-[20px]" src="./images/wheel.png" alt="wheel photo">
+                        <img class="w-[80px] h-[80px] rounded-tr-[20px] sm:w-[60px] sm:h-[60px]"
+                             src="./images/wheel.png" alt="wheel photo">
                     </div>
-                    <div class="flex justify-center"><p class="w-[133px] mt-[3px] leading-4">Tires, rims and wheels</p>
+                    <div class="flex justify-center"><p
+                            class="w-[133px] mt-[3px] leading-4 sm:text-[10px] sm:w-[97px] sm:leading-[11px] sm:mt-[5px]">
+                        Tires, rims and wheels</p>
                     </div>
                 </div>
-                <div class="bg-white w-[147px] h-[130px] rounded-[20px]">
+                <div class="bg-white w-[147px] h-[130px] rounded-[20px] sm:w-[107px] sm:h-[96px]">
                     <div class="flex justify-between">
-                        <img class="w-[18.33px] h-[18.33px] mt-[26.83px] ml-[26.03px] " src="./icons/Game.png"
+                        <img class="w-[18.33px] h-[18.33px] mt-[26.83px] ml-[26.03px] sm:mt-[15px] sm:ml-[15px]"
+                             src="./icons/Game.png"
                              alt="game icon">
-                        <img class="w-[70px] h-[80px] rounded-tr-[20px]" src="./images/teddy_bear.png"
+                        <img class="w-[70px] h-[80px] rounded-tr-[20px] sm:w-[50px] sm:h-[60px]"
+                             src="./images/teddy_bear.png"
                              alt="teddy bear photo">
                     </div>
-                    <div class="flex justify-center"><p class="w-[133px] mt-[19px] leading-4">Children's World</p>
+                    <div class="flex justify-center"><p
+                            class="w-[133px] mt-[19px] leading-4 sm:text-[10px] sm:w-[97px] sm:leading-[11px] sm:mt-[17px]">
+                        Children's World</p>
                     </div>
                 </div>
-                <div class="bg-white w-[147px] h-[130px] rounded-[20px]">
+                <div class="bg-white w-[147px] h-[130px] rounded-[20px] sm:w-[107px] sm:h-[96px]">
                     <div class="flex justify-between">
-                        <img class="w-[17.42px] h-[18.33px] mt-[26.83px] ml-[22.29px] " src="./icons/Home.png"
+                        <img class="w-[17.42px] h-[18.33px] mt-[26.83px] ml-[22.29px] sm:mt-[15px] sm:ml-[15px]"
+                             src="./icons/Home.png"
                              alt="house icon">
-                        <img class="w-[105px] h-[80px] rounded-tr-[20px]" src="./images/house.png" alt="house photo">
+                        <img class="w-[105px] h-[80px] rounded-tr-[20px] sm:w-[80px] sm:h-[60px]"
+                             src="./images/house.png" alt="house photo">
                     </div>
-                    <div class="flex justify-center"><p class="w-[133px] mt-[19px] leading-4">Real Estate</p>
+                    <div class="flex justify-center"><p
+                            class="w-[133px] mt-[19px] leading-4 sm:text-[10px] sm:w-[97px] sm:leading-[11px] sm:mt-[17px]">
+                        Real Estate</p>
                     </div>
                 </div>
-                <div class="bg-white w-[147px] h-[130px] rounded-[20px]">
+                <div x-data="{hidden:true}" x-on:click.stop="hidden=false"
+                     class="bg-white w-[147px] h-[130px] rounded-[20px] sm:w-[107px] sm:h-[96px] hover:text-custom_orange hover">
                     <div class="flex justify-between">
-                        <img class="w-[22px] h-[17.59px] mt-[27px] ml-[20px] " src="./icons/Car.png"
+                        <img class=" hover:text-red-500 w-[22px] h-[17.59px] mt-[27px] ml-[20px] sm:mt-[15px] sm:ml-[15px]"
+                             src="./icons/Car.png"
                              alt="car icon">
-                        <img class="w-[80px] h-[80px] rounded-tr-[20px]" src="./images/car.png" alt="car photo">
+                        <img class="w-[80px] h-[80px] rounded-tr-[20px] sm:w-[60px] sm:h-[60px]" src="./images/car.png"
+                             alt="car photo">
                     </div>
-                    <div class="flex justify-center"><p class="w-[133px] mt-[19px] leading-4">Car</p>
+                    <div class="flex justify-center">
+                        <p class="w-[133px] mt-[19px] leading-4 sm:text-[10px] sm:w-[97px] sm:leading-[11px] sm:mt-[17px]">
+                            Car</p>
+                    </div>
+                    <div x-on:click.outside="hidden=true" x-bind:class="{'hidden':hidden}"
+                         class="flex absolute h-[250px] w-[700px] bg-white rounded-b-[20px]">
+                        <ul class="flex flex-col gap-y-[15px] mt-[30px] ml-[60px]">
+                            <li class="flex"><img src="./icons/Arrow.png" class="mr-[11px]">
+                                <p>Passenger cars</p></li>
+                            <li class="flex"><img src="./icons/Arrow.png" class="mr-[11px]">
+                                <p>Trucks and lorries</p></li>
+                            <li class="flex"><img src="./icons/Arrow.png" class="mr-[11px]">
+                                <p>Buses</p></li>
+                            <li class="flex"><img src="./icons/Arrow.png" class="mr-[11px]">
+                                <p>Motorcycle</p></li>
+                        </ul>
+                        <div class="w-[2px] h-[157px] bg-main_bg mt-[15px] ml-[115px] mr-[70px]"></div>
+                        <ul class="flex flex-col gap-y-[15px] mt-[30px]">
+                            <li class="flex"><img src="./icons/Arrow.png" class="mr-[11px]">
+                                <p>Special equipment</p></li>
+                            <li class="flex"><img src="./icons/Arrow.png" class="mr-[11px]">
+                                <p>Agricultural machinery</p></li>
+                            <li class="flex"><img src="./icons/Arrow.png" class="mr-[11px]">
+                                <p>Water transport</p></li>
+                            <li class="flex"><img src="./icons/Arrow.png" class="mr-[11px]">
+                                <p>Cars from other countries</p></li>
+                        </ul>
                     </div>
                 </div>
-                <div class="bg-white w-[147px] h-[130px] rounded-[20px]">
+                <div class="bg-white w-[147px] h-[130px] rounded-[20px] sm:w-[107px] sm:h-[96px]">
                     <div class="flex justify-between">
-                        <img class="w-[18.01px] h-[18.01px] mt-[26.99px] ml-[21.99px] " src="./icons/Setting.png"
+                        <img class="w-[18.01px] h-[18.01px] mt-[26.99px] ml-[21.99px] sm:mt-[15px] sm:ml-[15px]"
+                             src="./icons/Setting.png"
                              alt="setting icon">
-                        <img class="w-[80px] h-[80px] rounded-tr-[20px]" src="./images/tools.png" alt="tools photo">
+                        <img class="w-[80px] h-[80px] rounded-tr-[20px] sm:w-[60px] sm:h-[60px]"
+                             src="./images/tools.png" alt="tools photo">
                     </div>
-                    <div class="flex justify-center"><p class="w-[133px] mt-[3px] leading-4">Spare parts for
+                    <div class="flex justify-center"><p
+                            class="w-[133px] mt-[3px] leading-4 sm:text-[10px] sm:w-[97px] sm:leading-[11px] sm:mt-[5px]">
+                        Spare parts for
                         transport</p>
                     </div>
                 </div>
-                <div class="bg-white w-[147px] h-[130px] rounded-[20px]">
+                <div class="bg-white w-[147px] h-[130px] rounded-[20px] sm:w-[107px] sm:h-[96px]">
                     <div class="flex justify-between">
-                        <img class="w-[18.33px] h-[18.33px] mt-[26.83px] ml-[21.83px] " src="./icons/Work.png"
+                        <img class="w-[18.33px] h-[18.33px] mt-[26.83px] ml-[21.83px] sm:mt-[15px] sm:ml-[15px]"
+                             src="./icons/Work.png"
                              alt="bag icon">
-                        <img class="w-[60px] h-[80px] rounded-tr-[20px]" src="./images/bag.png" alt="work photo">
+                        <img class="w-[60px] h-[80px] rounded-tr-[20px] sm:w-[40px] sm:h-[60px]" src="./images/bag.png"
+                             alt="work photo">
                     </div>
-                    <div class="flex justify-center"><p class="w-[133px] mt-[19px] leading-4">Work</p>
+                    <div class="flex justify-center"><p
+                            class="w-[133px] mt-[19px] leading-4 sm:text-[10px] sm:w-[97px] sm:leading-[11px] sm:mt-[17px]">
+                        Work</p>
                     </div>
                 </div>
-                <div class="bg-white w-[147px] h-[130px] rounded-[20px]">
+                <div class="bg-white w-[147px] h-[130px] rounded-[20px] sm:w-[107px] sm:h-[96px]">
                     <div class="flex justify-between">
-                        <img class="w-[20px] h-[18px] mt-[27px] ml-[21px] " src="./icons/Dog.png"
+                        <img class="w-[20px] h-[18px] mt-[27px] ml-[21px] sm:mt-[15px] sm:ml-[15px]"
+                             src="./icons/Dog.png"
                              alt="dog icon">
-                        <img class="w-[80px] h-[80px] rounded-tr-[20px]" src="./images/dog.png" alt="dog photo">
+                        <img class="w-[80px] h-[80px] rounded-tr-[20px] sm:w-[60px] sm:h-[60px]" src="./images/dog.png"
+                             alt="dog photo">
                     </div>
-                    <div class="flex justify-center"><p class="w-[133px] mt-[19px] leading-4">Animals</p>
+                    <div class="flex justify-center"><p
+                            class="w-[133px] mt-[19px] leading-4 sm:text-[10px] sm:w-[97px] sm:leading-[11px] sm:mt-[17px]">
+                        Animals</p>
                     </div>
                 </div>
-                <div class="bg-white w-[147px] h-[130px] rounded-[20px]">
+                <div class="bg-white w-[147px] h-[130px] rounded-[20px] sm:w-[107px] sm:h-[96px]">
                     <div class="flex justify-between">
-                        <img class="w-[15.19px] h-[18.01px] mt-[26.39px] ml-[23.81px] " src="./icons/Lamp.png"
+                        <img class="w-[15.19px] h-[18.01px] mt-[26.39px] ml-[23.81px] sm:mt-[15px] sm:ml-[15px]"
+                             src="./icons/Lamp.png"
                              alt="setting icon">
-                        <img class="w-[105px] h-[80px] rounded-tr-[20px]" src="./images/sofa.png" alt="sofa photo">
+                        <img class="w-[105px] h-[80px] rounded-tr-[20px] sm:w-[80px] sm:h-[60px]"
+                             src="./images/sofa.png" alt="sofa photo">
                     </div>
-                    <div class="flex justify-center"><p class="w-[133px] mt-[19px] leading-4">Home and garden</p>
+                    <div class="flex justify-center"><p
+                            class="w-[133px] mt-[19px] leading-4 sm:text-[10px] sm:w-[97px] sm:leading-[11px] sm:mt-[17px]">
+                        Home and garden</p>
                     </div>
                 </div>
-                <div class="bg-white w-[147px] h-[130px] rounded-[20px]">
+                <div class="bg-white w-[147px] h-[130px] rounded-[20px] sm:w-[107px] sm:h-[96px]">
                     <div class="flex justify-between">
-                        <img class="w-[20.11px] h-[20.11px] mt-[25.89px] ml-[20.89px] " src="./icons/Plug.png"
+                        <img class="w-[20.11px] h-[20.11px] mt-[25.89px] ml-[20.89px] sm:mt-[15px] sm:ml-[15px]"
+                             src="./icons/Plug.png"
                              alt="plug icon">
-                        <img class="w-[80px] h-[80px] rounded-tr-[20px]" src="./images/laptop.png" alt="laptop photo">
+                        <img class="w-[80px] h-[80px] rounded-tr-[20px] sm:w-[60px] sm:h-[60px]"
+                             src="./images/laptop.png" alt="laptop photo">
                     </div>
-                    <div class="flex justify-center"><p class="w-[133px] mt-[19px] leading-4">Electronics</p>
+                    <div class="flex justify-center"><p
+                            class="w-[133px] mt-[19px] leading-4 sm:text-[10px] sm:w-[97px] sm:leading-[11px] sm:mt-[17px]">
+                        Electronics</p>
                     </div>
                 </div>
-                <div class="bg-white w-[147px] h-[130px] rounded-[20px]">
+                <div class="bg-white w-[147px] h-[130px] rounded-[20px] sm:w-[107px] sm:h-[96px]">
                     <div class="flex justify-between">
-                        <img class="w-[18px] h-[18px] mt-[27px] ml-[22px] " src="./icons/Dolar.png"
+                        <img class="w-[18px] h-[18px] mt-[27px] ml-[22px] sm:mt-[15px] sm:ml-[15px]"
+                             src="./icons/Dolar.png"
                              alt="dolar icon">
-                        <img class="w-[105px] h-[69px] rounded-tr-[20px]" src="./images/paint_roller.png"
+                        <img class="w-[105px] h-[69px] rounded-tr-[20px] sm:w-[80px] sm:h-[49px]"
+                             src="./images/paint_roller.png"
                              alt="paint roller photo">
                     </div>
-                    <div class="flex justify-center"><p class="w-[133px] mt-[14px] leading-4">Business and services</p>
+                    <div class="flex justify-center"><p
+                            class="w-[133px] mt-[14px] leading-4 sm:text-[10px] sm:w-[87px] sm:leading-[11px] sm:mt-[17px]">
+                        Business and services</p>
                     </div>
                 </div>
-                <div class="bg-white w-[147px] h-[130px] rounded-[20px]">
+                <div class="bg-white w-[147px] h-[130px] rounded-[20px] sm:w-[107px] sm:h-[96px]">
                     <div class="flex justify-between">
-                        <img class="w-[15.95px] h-[19.89px] mt-[26px] ml-[22.8px] " src="./icons/Dress.png"
+                        <img class="w-[15.95px] h-[19.89px] mt-[26px] ml-[22.8px] sm:mt-[15px] sm:ml-[15px]"
+                             src="./icons/Dress.png"
                              alt="dress icon">
-                        <img class="w-[70px] h-[80px] rounded-tr-[20px]" src="./images/dress.png" alt="dress photo">
+                        <img class="w-[70px] h-[80px] rounded-tr-[20px] sm:w-[50px] sm:h-[60px]"
+                             src="./images/dress.png" alt="dress photo">
                     </div>
-                    <div class="flex justify-center"><p class="w-[133px] mt-[19px] leading-4">Fashion and style</p>
+                    <div class="flex justify-center"><p
+                            class="w-[133px] mt-[19px] leading-4 sm:text-[10px] sm:w-[97px] sm:leading-[11px] sm:mt-[17px]">
+                        Fashion and style</p>
                     </div>
                 </div>
-                <div class="bg-white w-[147px] h-[130px] rounded-[20px]">
+                <div class="bg-white w-[147px] h-[130px] rounded-[20px] sm:w-[107px] sm:h-[96px]">
                     <div class="flex justify-between">
-                        <img class="w-[18.85px] h-[18.67px] mt-[26.83px] ml-[22.29px] " src="./icons/Mountain.png"
+                        <img class="w-[18.85px] h-[18.67px] mt-[26.83px] ml-[22.29px] sm:mt-[15px] sm:ml-[15px]"
+                             src="./icons/Mountain.png"
                              alt="mountains icon">
-                        <img class="w-[80px] h-[80px] rounded-tr-[20px]" src="./images/ball.png" alt="ball photo">
+                        <img class="w-[80px] h-[80px] rounded-tr-[20px] sm:w-[60px] sm:h-[60px]" src="./images/ball.png"
+                             alt="ball photo">
                     </div>
-                    <div class="flex justify-center"><p class="w-[133px] mt-[3px] leading-4">Hobbies, recreation and
+                    <div class="flex justify-center"><p
+                            class="w-[133px] mt-[3px] leading-4 sm:text-[10px] sm:w-[97px] sm:leading-[11px] sm:mt-[5px]">
+                        Hobbies, recreation and
                         sports</p>
                     </div>
                 </div>
-                <div class="bg-white w-[147px] h-[130px] rounded-[20px]">
+                <div class="bg-white w-[147px] h-[130px] rounded-[20px] sm:w-[107px] sm:h-[96px]">
                     <div class="flex justify-between">
-                        <img class="w-[19px] h-[19px] mt-[26px] ml-[22px] " src="./icons/Price-tag.png"
+                        <img class="w-[19px] h-[19px] mt-[26px] ml-[22px] sm:mt-[15px] sm:ml-[15px]"
+                             src="./icons/Price-tag.png"
                              alt="price tag icon">
-                        <img class="w-[95px] h-[80px] rounded-tr-[20px]" src="./images/free.png" alt="price tag photo">
+                        <img class="w-[95px] h-[80px] rounded-tr-[20px] sm:w-[70px] sm:h-[60px]" src="./images/free.png"
+                             alt="price tag photo">
                     </div>
-                    <div class="flex justify-center"><p class="w-[133px] mt-[3px] leading-4">I'll give it to you for
+                    <div class="flex justify-center"><p
+                            class="w-[133px] mt-[3px] leading-4 sm:text-[10px] sm:w-[97px] sm:leading-[11px] sm:mt-[5px]">
+                        I'll give it to you for
                         free</p>
                     </div>
                 </div>
-                <div class="bg-white w-[147px] h-[130px] rounded-[20px]">
+                <div class="bg-white w-[147px] h-[130px] rounded-[20px] sm:w-[107px] sm:h-[96px]">
                     <div class="flex justify-between">
-                        <img class="w-[22px] h-[22px] mt-[25px] ml-[20px] " src="./icons/Spanner.png"
+                        <img class="w-[22px] h-[22px] mt-[25px] ml-[20px] sm:mt-[15px] sm:ml-[15px]"
+                             src="./icons/Spanner.png"
                              alt="spanner icon">
-                        <img class="w-[80px] h-[80px] rounded-tr-[20px]" src="./images/motorcycle.png"
+                        <img class="w-[80px] h-[80px] rounded-tr-[20px] sm:w-[60px] sm:h-[60px]"
+                             src="./images/motorcycle.png"
                              alt="Auto and motorcycle services photo">
                     </div>
-                    <div class="flex justify-center"><p class="w-[133px] mt-[3px] leading-4">Auto / motorcycle
+                    <div class="flex justify-center"><p
+                            class="w-[133px] mt-[3px] leading-4 sm:text-[10px] sm:w-[97px] sm:leading-[11px] sm:mt-[5px]">
+                        Auto / motorcycle
                         services</p>
                     </div>
                 </div>
-                <div class="bg-white w-[147px] h-[130px] rounded-[20px]">
+                <div class="bg-white w-[147px] h-[130px] rounded-[20px] sm:w-[107px] sm:h-[96px]">
                     <div class="flex justify-between">
-                        <img class="w-[22px] h-[22px] mt-[25px] ml-[20px] " src="./icons/Wall.png"
+                        <img class="w-[22px] h-[22px] mt-[25px] ml-[20px] sm:mt-[15px] sm:ml-[15px]"
+                             src="./icons/Wall.png"
                              alt="wall icon">
-                        <img class="w-[80px] h-[80px] rounded-tr-[20px]" src="./images/brick.png" alt="brick photo">
+                        <img class="w-[80px] h-[80px] rounded-tr-[20px] sm:w-[60px] sm:h-[60px]"
+                             src="./images/brick.png" alt="brick photo">
                     </div>
-                    <div class="flex justify-center"><p class="w-[133px] mt-[19px] leading-4">Construction</p>
+                    <div class="flex justify-center"><p
+                            class="w-[133px] mt-[19px] leading-4 sm:text-[10px] sm:w-[97px] sm:leading-[11px] sm:mt-[17px]">
+                        Construction</p>
                     </div>
                 </div>
-                <div class="bg-white w-[147px] h-[130px] rounded-[20px]">
+
+                <div class="bg-white w-[147px] h-[130px] rounded-[20px] sm:w-[107px] sm:h-[96px]">
                     <div class="flex justify-between">
-                        <img class="w-[17.11px] h-[17.11px] mt-[27.89px] ml-[22.89px] " src="./icons/Package.png"
+                        <img class="w-[17.11px] h-[17.11px] mt-[27.89px] ml-[22.89px] sm:mt-[15px] sm:ml-[15px]"
+                             src="./icons/Package.png"
                              alt="package icon">
-                        <img class="w-[80px] h-[80px] rounded-tr-[20px]" src="./images/cart.png" alt="cart photo">
+                        <img class="w-[80px] h-[80px] rounded-tr-[20px] sm:w-[60px] sm:h-[60px]" src="./images/cart.png"
+                             alt="cart photo">
                     </div>
-                    <div class="flex justify-center"><p class="w-[133px] mt-[19px] leading-4">Other</p>
+                    <div class="flex justify-center"><p
+                            class="w-[133px] mt-[19px] leading-4 sm:text-[10px] sm:w-[97px] sm:leading-[11px] sm:mt-[17px]">
+                        Other</p>
                     </div>
                 </div>
-                <!--                check the width of images-->
             </div>
         </div>
-        <div class="bg-main_bg2 mt-[140px]">
-            <div class="flex justify-center pt-[80px] mb-[60px]">
-                <h2 class="font-bold text-main_text_color text-[32px]">VIP announcements</h2>
+        <div class="bg-main_bg2 mt-[140px] sm:mt-[40px]">
+            <div class="flex justify-center pt-[80px] mb-[60px] sm:pt-[40px] sm:mb-[30px]">
+                <h2 class="font-bold text-main_text_color text-[32px] sm:text-[24px]">VIP announcements</h2>
             </div>
-            <div class="flex flex-wrap gap-x-[19px] gap-y-[24px] justify-center">
-                <div class="flex w-[244px] h-[374px] flex-col justify-center rounded-[10px]">
-                    <img class="h-[137px]" src="./images/phone.png" alt="phone">
-                    <div class="pr-[20px] pl-[20px] bg-white w-[244px] h-[258px] rounded-[10px]">
-                        <h3 class="w-[204px] text-base font-bold leading-[18px] mt-[25px]">Google Pixel 7 Pro 128gb |
+            <div class="flex flex-wrap gap-x-[19px] gap-y-[24px] justify-center sm:gap-[23px]">
+                <div class="flex w-[244px] h-[374px] flex-col justify-center rounded-[10px] sm:w-[164px] sm:h-[242px]">
+                    <img class="h-[137px] sm:h-[92px]" src="./images/phone.png" alt="phone">
+                    <div class="pr-[20px] pl-[20px] bg-white w-[244px] h-[237px] rounded-b-[10px] sm:pr-[13px] sm:pl-[13px] sm:w-[164px] sm:h-[150px]">
+                        <h3 class="w-[204px] text-base font-bold leading-[18px] mt-[25px] sm:mt-[15px] sm:w-[138px] sm:text-[11px] sm:leading-[12.65px]">
+                            Google Pixel 7 Pro 128gb |
                             pixel
                             watch new g...</h3>
-                        <div class="flex mt-[20px] items-center leading-4 text-sm">
-                            <img class="w-[10px] h-[12px] mr-[8px]" src="./icons/Location.png" alt="location">
-                            <p>New York, NY, USA</p>
+                        <div class="flex mt-[20px] items-center sm:mt-[10px]">
+                            <img class="w-[10px] h-[12px] mr-[8px] sm:w-[6.87px] sm:h-[8.25px]"
+                                 src="./icons/Location.png" alt="location">
+                            <p class="leading-4 text-sm sm:leading-[11.05.px] sm:text-[10px] ">New York, NY, USA</p>
                         </div>
-                        <div class="flex flex mt-[10px] items-center leading-4 text-sm">
-                            <img class="w-[12.33px] h-[12.33px] mr-[6.83px]" src="./icons/TimeCircle.png" alt="time">
-                            <p>29 Leaflet 5:46 pm</p>
+                        <div class="flex flex mt-[10px] items-center sm:mt-0 ">
+                            <img class="w-[8.48px] h-[8.48px] mr-[6.83px]" src="./icons/TimeCircle.png" alt="time">
+                            <p class="leading-4 text-sm sm:leading-[11.05.px] sm:text-[10px] ">29 Leaflet 5:46 pm</p>
                         </div>
-                        <p class="text-base font-bold mt-[15px] h-[18px]">$871,000</p>
-                        <div class="w-[204px] h-[2px] bg-form_color mt-[19px]"></div>
-                        <div class="mt-[15px]">
-                            <div class="flex gap-x-[5px] items-center mb-[15px] h-[30px]">
-                                    <img class="h-[30px] w-[30px] " src="./icons/Chat30.png"
-                                         alt="chat icon">
+                        <p class="text-base font-bold mt-[15px] h-[18px] sm:mt-[10px] sm:text-[11px] sm:leading-[12.65px]">
+                            $871,000</p>
+                        <div class="w-[204px] h-[2px] bg-form_color mt-[19px] sm:w-[138px] sm:h-[1px] sm:mt-[0px]"></div>
+                        <div class="mt-[15px] sm:mt-[10px]">
+                            <div class="flex gap-x-[5px] items-center mb-[15px] h-[30px] sm:h-[20px] sm:mb-[15px]">
+                                <img class="h-[30px] w-[30px] sm:h-[20px] sm:w-[20px]" src="./icons/Chat30.png"
+                                     alt="chat icon">
 
                                 <div class="">
-                                    <img class="h-[30px] w-[30px]" src="icons/Heart30.png"
+                                    <img class="h-[30px] w-[30px] sm:h-[20px] sm:w-[20px]" src="icons/Heart30.png"
                                          alt="heart icon">
                                 </div>
-                                <p class="ml-[73px] mt-[6px] text-sm text-main_text_color">149 views</p>
+                                <p class="ml-[73px] mt-[6px] text-sm text-main_text_color sm:ml-[45px] sm:text-[10px]">
+                                    149 views</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="flex w-[244px] h-[374px] flex-col justify-center rounded-[10px]">
-                    <img class="h-[137px]" src="./images/phone.png" alt="phone">
-                    <div class="pr-[20px] pl-[20px] bg-white w-[244px] h-[258px] rounded-[10px]">
-                        <h3 class="w-[204px] text-base font-bold leading-[18px] mt-[25px]">Google Pixel 7 Pro 128gb |
+                <div class="flex w-[244px] h-[374px] flex-col justify-center rounded-[10px] sm:w-[164px] sm:h-[242px]">
+                    <img class="h-[137px] sm:h-[92px]" src="./images/phone.png" alt="phone">
+                    <div class="pr-[20px] pl-[20px] bg-white w-[244px] h-[237px] rounded-b-[10px] sm:pr-[13px] sm:pl-[13px] sm:w-[164px] sm:h-[150px]">
+                        <h3 class="w-[204px] text-base font-bold leading-[18px] mt-[25px] sm:mt-[15px] sm:w-[138px] sm:text-[11px] sm:leading-[12.65px]">
+                            Google Pixel 7 Pro 128gb |
                             pixel
                             watch new g...</h3>
-                        <div class="flex mt-[20px] items-center leading-4 text-sm">
-                            <img class="w-[10px] h-[12px] mr-[8px]" src="./icons/Location.png" alt="location">
-                            <p>New York, NY, USA</p>
+                        <div class="flex mt-[20px] items-center sm:mt-[10px]">
+                            <img class="w-[10px] h-[12px] mr-[8px] sm:w-[6.87px] sm:h-[8.25px]"
+                                 src="./icons/Location.png" alt="location">
+                            <p class="leading-4 text-sm sm:leading-[11.05.px] sm:text-[10px] ">New York, NY, USA</p>
                         </div>
-                        <div class="flex flex mt-[10px] items-center leading-4 text-sm">
-                            <img class="w-[12.33px] h-[12.33px] mr-[6.83px]" src="./icons/TimeCircle.png" alt="time">
-                            <p>29 Leaflet 5:46 pm</p>
+                        <div class="flex flex mt-[10px] items-center sm:mt-0 ">
+                            <img class="w-[8.48px] h-[8.48px] mr-[6.83px]" src="./icons/TimeCircle.png" alt="time">
+                            <p class="leading-4 text-sm sm:leading-[11.05.px] sm:text-[10px] ">29 Leaflet 5:46 pm</p>
                         </div>
-                        <p class="text-base font-bold mt-[15px] h-[18px]">$871,000</p>
-                        <div class="w-[204px] h-[2px] bg-form_color mt-[19px]"></div>
-                        <div class="mt-[15px]">
-                            <div class="flex gap-x-[5px] items-center mb-[15px] h-[30px]">
-                                <img class="h-[30px] w-[30px] " src="./icons/Chat30.png"
+                        <p class="text-base font-bold mt-[15px] h-[18px] sm:mt-[10px] sm:text-[11px] sm:leading-[12.65px]">
+                            $871,000</p>
+                        <div class="w-[204px] h-[2px] bg-form_color mt-[19px] sm:w-[138px] sm:h-[1px] sm:mt-[0px]"></div>
+                        <div class="mt-[15px] sm:mt-[10px]">
+                            <div class="flex gap-x-[5px] items-center mb-[15px] h-[30px] sm:h-[20px] sm:mb-[15px]">
+                                <img class="h-[30px] w-[30px] sm:h-[20px] sm:w-[20px]" src="./icons/Chat30.png"
                                      alt="chat icon">
 
                                 <div class="">
-                                    <img class="h-[30px] w-[30px]" src="icons/Heart30.png"
+                                    <img class="h-[30px] w-[30px] sm:h-[20px] sm:w-[20px]" src="icons/Heart30.png"
                                          alt="heart icon">
                                 </div>
-                                <p class="ml-[73px] mt-[6px] text-sm text-main_text_color">149 views</p>
+                                <p class="ml-[73px] mt-[6px] text-sm text-main_text_color sm:ml-[45px] sm:text-[10px]">
+                                    149 views</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="flex w-[244px] h-[374px] flex-col justify-center rounded-[10px]">
-                    <img class="h-[137px]" src="./images/phone.png" alt="phone">
-                    <div class="pr-[20px] pl-[20px] bg-white w-[244px] h-[258px] rounded-[10px]">
-                        <h3 class="w-[204px] text-base font-bold leading-[18px] mt-[25px]">Google Pixel 7 Pro 128gb |
+                <div class="flex w-[244px] h-[374px] flex-col justify-center rounded-[10px] sm:w-[164px] sm:h-[242px]">
+                    <img class="h-[137px] sm:h-[92px]" src="./images/phone.png" alt="phone">
+                    <div class="pr-[20px] pl-[20px] bg-white w-[244px] h-[237px] rounded-b-[10px] sm:pr-[13px] sm:pl-[13px] sm:w-[164px] sm:h-[150px]">
+                        <h3 class="w-[204px] text-base font-bold leading-[18px] mt-[25px] sm:mt-[15px] sm:w-[138px] sm:text-[11px] sm:leading-[12.65px]">
+                            Google Pixel 7 Pro 128gb |
                             pixel
                             watch new g...</h3>
-                        <div class="flex mt-[20px] items-center leading-4 text-sm">
-                            <img class="w-[10px] h-[12px] mr-[8px]" src="./icons/Location.png" alt="location">
-                            <p>New York, NY, USA</p>
+                        <div class="flex mt-[20px] items-center sm:mt-[10px]">
+                            <img class="w-[10px] h-[12px] mr-[8px] sm:w-[6.87px] sm:h-[8.25px]"
+                                 src="./icons/Location.png" alt="location">
+                            <p class="leading-4 text-sm sm:leading-[11.05.px] sm:text-[10px] ">New York, NY, USA</p>
                         </div>
-                        <div class="flex flex mt-[10px] items-center leading-4 text-sm">
-                            <img class="w-[12.33px] h-[12.33px] mr-[6.83px]" src="./icons/TimeCircle.png" alt="time">
-                            <p>29 Leaflet 5:46 pm</p>
+                        <div class="flex flex mt-[10px] items-center sm:mt-0 ">
+                            <img class="w-[8.48px] h-[8.48px] mr-[6.83px]" src="./icons/TimeCircle.png" alt="time">
+                            <p class="leading-4 text-sm sm:leading-[11.05.px] sm:text-[10px] ">29 Leaflet 5:46 pm</p>
                         </div>
-                        <p class="text-base font-bold mt-[15px] h-[18px]">$871,000</p>
-                        <div class="w-[204px] h-[2px] bg-form_color mt-[19px]"></div>
-                        <div class="mt-[15px]">
-                            <div class="flex gap-x-[5px] items-center mb-[15px] h-[30px]">
-                                <img class="h-[30px] w-[30px] " src="./icons/Chat30.png"
+                        <p class="text-base font-bold mt-[15px] h-[18px] sm:mt-[10px] sm:text-[11px] sm:leading-[12.65px]">
+                            $871,000</p>
+                        <div class="w-[204px] h-[2px] bg-form_color mt-[19px] sm:w-[138px] sm:h-[1px] sm:mt-[0px]"></div>
+                        <div class="mt-[15px] sm:mt-[10px]">
+                            <div class="flex gap-x-[5px] items-center mb-[15px] h-[30px] sm:h-[20px] sm:mb-[15px]">
+                                <img class="h-[30px] w-[30px] sm:h-[20px] sm:w-[20px]" src="./icons/Chat30.png"
                                      alt="chat icon">
 
                                 <div class="">
-                                    <img class="h-[30px] w-[30px]" src="icons/Heart30.png"
+                                    <img class="h-[30px] w-[30px] sm:h-[20px] sm:w-[20px]" src="icons/Heart30.png"
                                          alt="heart icon">
                                 </div>
-                                <p class="ml-[73px] mt-[6px] text-sm text-main_text_color">149 views</p>
+                                <p class="ml-[73px] mt-[6px] text-sm text-main_text_color sm:ml-[45px] sm:text-[10px]">
+                                    149 views</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="flex w-[244px] h-[374px] flex-col justify-center rounded-[10px]">
-                    <img class="h-[137px]" src="./images/phone.png" alt="phone">
-                    <div class="pr-[20px] pl-[20px] bg-white w-[244px] h-[258px] rounded-[10px]">
-                        <h3 class="w-[204px] text-base font-bold leading-[18px] mt-[25px]">Google Pixel 7 Pro 128gb |
+                <div class="flex w-[244px] h-[374px] flex-col justify-center rounded-[10px] sm:w-[164px] sm:h-[242px]">
+                    <img class="h-[137px] sm:h-[92px]" src="./images/phone.png" alt="phone">
+                    <div class="pr-[20px] pl-[20px] bg-white w-[244px] h-[237px] rounded-b-[10px] sm:pr-[13px] sm:pl-[13px] sm:w-[164px] sm:h-[150px]">
+                        <h3 class="w-[204px] text-base font-bold leading-[18px] mt-[25px] sm:mt-[15px] sm:w-[138px] sm:text-[11px] sm:leading-[12.65px]">
+                            Google Pixel 7 Pro 128gb |
                             pixel
                             watch new g...</h3>
-                        <div class="flex mt-[20px] items-center leading-4 text-sm">
-                            <img class="w-[10px] h-[12px] mr-[8px]" src="./icons/Location.png" alt="location">
-                            <p>New York, NY, USA</p>
+                        <div class="flex mt-[20px] items-center sm:mt-[10px]">
+                            <img class="w-[10px] h-[12px] mr-[8px] sm:w-[6.87px] sm:h-[8.25px]"
+                                 src="./icons/Location.png" alt="location">
+                            <p class="leading-4 text-sm sm:leading-[11.05.px] sm:text-[10px] ">New York, NY, USA</p>
                         </div>
-                        <div class="flex flex mt-[10px] items-center leading-4 text-sm">
-                            <img class="w-[12.33px] h-[12.33px] mr-[6.83px]" src="./icons/TimeCircle.png" alt="time">
-                            <p>29 Leaflet 5:46 pm</p>
+                        <div class="flex flex mt-[10px] items-center sm:mt-0 ">
+                            <img class="w-[8.48px] h-[8.48px] mr-[6.83px]" src="./icons/TimeCircle.png" alt="time">
+                            <p class="leading-4 text-sm sm:leading-[11.05.px] sm:text-[10px] ">29 Leaflet 5:46 pm</p>
                         </div>
-                        <p class="text-base font-bold mt-[15px] h-[18px]">$871,000</p>
-                        <div class="w-[204px] h-[2px] bg-form_color mt-[19px]"></div>
-                        <div class="mt-[15px]">
-                            <div class="flex gap-x-[5px] items-center mb-[15px] h-[30px]">
-                                <img class="h-[30px] w-[30px] " src="./icons/Chat30.png"
+                        <p class="text-base font-bold mt-[15px] h-[18px] sm:mt-[10px] sm:text-[11px] sm:leading-[12.65px]">
+                            $871,000</p>
+                        <div class="w-[204px] h-[2px] bg-form_color mt-[19px] sm:w-[138px] sm:h-[1px] sm:mt-[0px]"></div>
+                        <div class="mt-[15px] sm:mt-[10px]">
+                            <div class="flex gap-x-[5px] items-center mb-[15px] h-[30px] sm:h-[20px] sm:mb-[15px]">
+                                <img class="h-[30px] w-[30px] sm:h-[20px] sm:w-[20px]" src="./icons/Chat30.png"
                                      alt="chat icon">
 
                                 <div class="">
-                                    <img class="h-[30px] w-[30px]" src="icons/Heart30.png"
+                                    <img class="h-[30px] w-[30px] sm:h-[20px] sm:w-[20px]" src="icons/Heart30.png"
                                          alt="heart icon">
                                 </div>
-                                <p class="ml-[73px] mt-[6px] text-sm text-main_text_color">149 views</p>
+                                <p class="ml-[73px] mt-[6px] text-sm text-main_text_color sm:ml-[45px] sm:text-[10px]">
+                                    149 views</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="flex w-[244px] h-[374px] flex-col justify-center rounded-[10px]">
-                    <img class="h-[137px]" src="./images/phone.png" alt="phone">
-                    <div class="pr-[20px] pl-[20px] bg-white w-[244px] h-[258px] rounded-[10px]">
-                        <h3 class="w-[204px] text-base font-bold leading-[18px] mt-[25px]">Google Pixel 7 Pro 128gb |
+                <div class="flex w-[244px] h-[374px] flex-col justify-center rounded-[10px] sm:w-[164px] sm:h-[242px]">
+                    <img class="h-[137px] sm:h-[92px]" src="./images/phone.png" alt="phone">
+                    <div class="pr-[20px] pl-[20px] bg-white w-[244px] h-[237px] rounded-b-[10px] sm:pr-[13px] sm:pl-[13px] sm:w-[164px] sm:h-[150px]">
+                        <h3 class="w-[204px] text-base font-bold leading-[18px] mt-[25px] sm:mt-[15px] sm:w-[138px] sm:text-[11px] sm:leading-[12.65px]">
+                            Google Pixel 7 Pro 128gb |
                             pixel
                             watch new g...</h3>
-                        <div class="flex mt-[20px] items-center leading-4 text-sm">
-                            <img class="w-[10px] h-[12px] mr-[8px]" src="./icons/Location.png" alt="location">
-                            <p>New York, NY, USA</p>
+                        <div class="flex mt-[20px] items-center sm:mt-[10px]">
+                            <img class="w-[10px] h-[12px] mr-[8px] sm:w-[6.87px] sm:h-[8.25px]"
+                                 src="./icons/Location.png" alt="location">
+                            <p class="leading-4 text-sm sm:leading-[11.05.px] sm:text-[10px] ">New York, NY, USA</p>
                         </div>
-                        <div class="flex flex mt-[10px] items-center leading-4 text-sm">
-                            <img class="w-[12.33px] h-[12.33px] mr-[6.83px]" src="./icons/TimeCircle.png" alt="time">
-                            <p>29 Leaflet 5:46 pm</p>
+                        <div class="flex flex mt-[10px] items-center sm:mt-0 ">
+                            <img class="w-[8.48px] h-[8.48px] mr-[6.83px]" src="./icons/TimeCircle.png" alt="time">
+                            <p class="leading-4 text-sm sm:leading-[11.05.px] sm:text-[10px] ">29 Leaflet 5:46 pm</p>
                         </div>
-                        <p class="text-base font-bold mt-[15px] h-[18px]">$871,000</p>
-                        <div class="w-[204px] h-[2px] bg-form_color mt-[19px]"></div>
-                        <div class="mt-[15px]">
-                            <div class="flex gap-x-[5px] items-center mb-[15px] h-[30px]">
-                                <img class="h-[30px] w-[30px] " src="./icons/Chat30.png"
+                        <p class="text-base font-bold mt-[15px] h-[18px] sm:mt-[10px] sm:text-[11px] sm:leading-[12.65px]">
+                            $871,000</p>
+                        <div class="w-[204px] h-[2px] bg-form_color mt-[19px] sm:w-[138px] sm:h-[1px] sm:mt-[0px]"></div>
+                        <div class="mt-[15px] sm:mt-[10px]">
+                            <div class="flex gap-x-[5px] items-center mb-[15px] h-[30px] sm:h-[20px] sm:mb-[15px]">
+                                <img class="h-[30px] w-[30px] sm:h-[20px] sm:w-[20px]" src="./icons/Chat30.png"
                                      alt="chat icon">
 
                                 <div class="">
-                                    <img class="h-[30px] w-[30px]" src="icons/Heart30.png"
+                                    <img class="h-[30px] w-[30px] sm:h-[20px] sm:w-[20px]" src="icons/Heart30.png"
                                          alt="heart icon">
                                 </div>
-                                <p class="ml-[73px] mt-[6px] text-sm text-main_text_color">149 views</p>
+                                <p class="ml-[73px] mt-[6px] text-sm text-main_text_color sm:ml-[45px] sm:text-[10px]">
+                                    149 views</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="flex w-[244px] h-[374px] flex-col justify-center rounded-[10px]">
-                    <img class="h-[137px]" src="./images/phone.png" alt="phone">
-                    <div class="pr-[20px] pl-[20px] bg-white w-[244px] h-[258px] rounded-[10px]">
-                        <h3 class="w-[204px] text-base font-bold leading-[18px] mt-[25px]">Google Pixel 7 Pro 128gb |
+                <div class="flex w-[244px] h-[374px] flex-col justify-center rounded-[10px] sm:w-[164px] sm:h-[242px]">
+                    <img class="h-[137px] sm:h-[92px]" src="./images/phone.png" alt="phone">
+                    <div class="pr-[20px] pl-[20px] bg-white w-[244px] h-[237px] rounded-b-[10px] sm:pr-[13px] sm:pl-[13px] sm:w-[164px] sm:h-[150px]">
+                        <h3 class="w-[204px] text-base font-bold leading-[18px] mt-[25px] sm:mt-[15px] sm:w-[138px] sm:text-[11px] sm:leading-[12.65px]">
+                            Google Pixel 7 Pro 128gb |
                             pixel
                             watch new g...</h3>
-                        <div class="flex mt-[20px] items-center leading-4 text-sm">
-                            <img class="w-[10px] h-[12px] mr-[8px]" src="./icons/Location.png" alt="location">
-                            <p>New York, NY, USA</p>
+                        <div class="flex mt-[20px] items-center sm:mt-[10px]">
+                            <img class="w-[10px] h-[12px] mr-[8px] sm:w-[6.87px] sm:h-[8.25px]"
+                                 src="./icons/Location.png" alt="location">
+                            <p class="leading-4 text-sm sm:leading-[11.05.px] sm:text-[10px] ">New York, NY, USA</p>
                         </div>
-                        <div class="flex flex mt-[10px] items-center leading-4 text-sm">
-                            <img class="w-[12.33px] h-[12.33px] mr-[6.83px]" src="./icons/TimeCircle.png" alt="time">
-                            <p>29 Leaflet 5:46 pm</p>
+                        <div class="flex flex mt-[10px] items-center sm:mt-0 ">
+                            <img class="w-[8.48px] h-[8.48px] mr-[6.83px]" src="./icons/TimeCircle.png" alt="time">
+                            <p class="leading-4 text-sm sm:leading-[11.05.px] sm:text-[10px] ">29 Leaflet 5:46 pm</p>
                         </div>
-                        <p class="text-base font-bold mt-[15px] h-[18px]">$871,000</p>
-                        <div class="w-[204px] h-[2px] bg-form_color mt-[19px]"></div>
-                        <div class="mt-[15px]">
-                            <div class="flex gap-x-[5px] items-center mb-[15px] h-[30px]">
-                                <img class="h-[30px] w-[30px] " src="./icons/Chat30.png"
+                        <p class="text-base font-bold mt-[15px] h-[18px] sm:mt-[10px] sm:text-[11px] sm:leading-[12.65px]">
+                            $871,000</p>
+                        <div class="w-[204px] h-[2px] bg-form_color mt-[19px] sm:w-[138px] sm:h-[1px] sm:mt-[0px]"></div>
+                        <div class="mt-[15px] sm:mt-[10px]">
+                            <div class="flex gap-x-[5px] items-center mb-[15px] h-[30px] sm:h-[20px] sm:mb-[15px]">
+                                <img class="h-[30px] w-[30px] sm:h-[20px] sm:w-[20px]" src="./icons/Chat30.png"
                                      alt="chat icon">
 
                                 <div class="">
-                                    <img class="h-[30px] w-[30px]" src="icons/Heart30.png"
+                                    <img class="h-[30px] w-[30px] sm:h-[20px] sm:w-[20px]" src="icons/Heart30.png"
                                          alt="heart icon">
                                 </div>
-                                <p class="ml-[73px] mt-[6px] text-sm text-main_text_color">149 views</p>
+                                <p class="ml-[73px] mt-[6px] text-sm text-main_text_color sm:ml-[45px] sm:text-[10px]">
+                                    149 views</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="flex w-[244px] h-[374px] flex-col justify-center rounded-[10px]">
-                    <img class="h-[137px]" src="./images/phone.png" alt="phone">
-                    <div class="pr-[20px] pl-[20px] bg-white w-[244px] h-[258px] rounded-[10px]">
-                        <h3 class="w-[204px] text-base font-bold leading-[18px] mt-[25px]">Google Pixel 7 Pro 128gb |
+                <div class="flex w-[244px] h-[374px] flex-col justify-center rounded-[10px] sm:w-[164px] sm:h-[242px]">
+                    <img class="h-[137px] sm:h-[92px]" src="./images/phone.png" alt="phone">
+                    <div class="pr-[20px] pl-[20px] bg-white w-[244px] h-[237px] rounded-b-[10px] sm:pr-[13px] sm:pl-[13px] sm:w-[164px] sm:h-[150px]">
+                        <h3 class="w-[204px] text-base font-bold leading-[18px] mt-[25px] sm:mt-[15px] sm:w-[138px] sm:text-[11px] sm:leading-[12.65px]">
+                            Google Pixel 7 Pro 128gb |
                             pixel
                             watch new g...</h3>
-                        <div class="flex mt-[20px] items-center leading-4 text-sm">
-                            <img class="w-[10px] h-[12px] mr-[8px]" src="./icons/Location.png" alt="location">
-                            <p>New York, NY, USA</p>
+                        <div class="flex mt-[20px] items-center sm:mt-[10px]">
+                            <img class="w-[10px] h-[12px] mr-[8px] sm:w-[6.87px] sm:h-[8.25px]"
+                                 src="./icons/Location.png" alt="location">
+                            <p class="leading-4 text-sm sm:leading-[11.05.px] sm:text-[10px] ">New York, NY, USA</p>
                         </div>
-                        <div class="flex flex mt-[10px] items-center leading-4 text-sm">
-                            <img class="w-[12.33px] h-[12.33px] mr-[6.83px]" src="./icons/TimeCircle.png" alt="time">
-                            <p>29 Leaflet 5:46 pm</p>
+                        <div class="flex flex mt-[10px] items-center sm:mt-0 ">
+                            <img class="w-[8.48px] h-[8.48px] mr-[6.83px]" src="./icons/TimeCircle.png" alt="time">
+                            <p class="leading-4 text-sm sm:leading-[11.05.px] sm:text-[10px] ">29 Leaflet 5:46 pm</p>
                         </div>
-                        <p class="text-base font-bold mt-[15px] h-[18px]">$871,000</p>
-                        <div class="w-[204px] h-[2px] bg-form_color mt-[19px]"></div>
-                        <div class="mt-[15px]">
-                            <div class="flex gap-x-[5px] items-center mb-[15px] h-[30px]">
-                                <img class="h-[30px] w-[30px] " src="./icons/Chat30.png"
+                        <p class="text-base font-bold mt-[15px] h-[18px] sm:mt-[10px] sm:text-[11px] sm:leading-[12.65px]">
+                            $871,000</p>
+                        <div class="w-[204px] h-[2px] bg-form_color mt-[19px] sm:w-[138px] sm:h-[1px] sm:mt-[0px]"></div>
+                        <div class="mt-[15px] sm:mt-[10px]">
+                            <div class="flex gap-x-[5px] items-center mb-[15px] h-[30px] sm:h-[20px] sm:mb-[15px]">
+                                <img class="h-[30px] w-[30px] sm:h-[20px] sm:w-[20px]" src="./icons/Chat30.png"
                                      alt="chat icon">
 
                                 <div class="">
-                                    <img class="h-[30px] w-[30px]" src="icons/Heart30.png"
+                                    <img class="h-[30px] w-[30px] sm:h-[20px] sm:w-[20px]" src="icons/Heart30.png"
                                          alt="heart icon">
                                 </div>
-                                <p class="ml-[73px] mt-[6px] text-sm text-main_text_color">149 views</p>
+                                <p class="ml-[73px] mt-[6px] text-sm text-main_text_color sm:ml-[45px] sm:text-[10px]">
+                                    149 views</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="flex w-[244px] h-[374px] flex-col justify-center rounded-[10px]">
-                    <img class="h-[137px]" src="./images/phone.png" alt="phone">
-                    <div class="pr-[20px] pl-[20px] bg-white w-[244px] h-[258px] rounded-[10px]">
-                        <h3 class="w-[204px] text-base font-bold leading-[18px] mt-[25px]">Google Pixel 7 Pro 128gb |
+                <div class="flex w-[244px] h-[374px] flex-col justify-center rounded-[10px] sm:w-[164px] sm:h-[242px]">
+                    <img class="h-[137px] sm:h-[92px]" src="./images/phone.png" alt="phone">
+                    <div class="pr-[20px] pl-[20px] bg-white w-[244px] h-[237px] rounded-b-[10px] sm:pr-[13px] sm:pl-[13px] sm:w-[164px] sm:h-[150px]">
+                        <h3 class="w-[204px] text-base font-bold leading-[18px] mt-[25px] sm:mt-[15px] sm:w-[138px] sm:text-[11px] sm:leading-[12.65px]">
+                            Google Pixel 7 Pro 128gb |
                             pixel
                             watch new g...</h3>
-                        <div class="flex mt-[20px] items-center leading-4 text-sm">
-                            <img class="w-[10px] h-[12px] mr-[8px]" src="./icons/Location.png" alt="location">
-                            <p>New York, NY, USA</p>
+                        <div class="flex mt-[20px] items-center sm:mt-[10px]">
+                            <img class="w-[10px] h-[12px] mr-[8px] sm:w-[6.87px] sm:h-[8.25px]"
+                                 src="./icons/Location.png" alt="location">
+                            <p class="leading-4 text-sm sm:leading-[11.05.px] sm:text-[10px] ">New York, NY, USA</p>
                         </div>
-                        <div class="flex flex mt-[10px] items-center leading-4 text-sm">
-                            <img class="w-[12.33px] h-[12.33px] mr-[6.83px]" src="./icons/TimeCircle.png" alt="time">
-                            <p>29 Leaflet 5:46 pm</p>
+                        <div class="flex flex mt-[10px] items-center sm:mt-0 ">
+                            <img class="w-[8.48px] h-[8.48px] mr-[6.83px]" src="./icons/TimeCircle.png" alt="time">
+                            <p class="leading-4 text-sm sm:leading-[11.05.px] sm:text-[10px] ">29 Leaflet 5:46 pm</p>
                         </div>
-                        <p class="text-base font-bold mt-[15px] h-[18px]">$871,000</p>
-                        <div class="w-[204px] h-[2px] bg-form_color mt-[19px]"></div>
-                        <div class="mt-[15px]">
-                            <div class="flex gap-x-[5px] items-center mb-[15px] h-[30px]">
-                                <img class="h-[30px] w-[30px] " src="./icons/Chat30.png"
+                        <p class="text-base font-bold mt-[15px] h-[18px] sm:mt-[10px] sm:text-[11px] sm:leading-[12.65px]">
+                            $871,000</p>
+                        <div class="w-[204px] h-[2px] bg-form_color mt-[19px] sm:w-[138px] sm:h-[1px] sm:mt-[0px]"></div>
+                        <div class="mt-[15px] sm:mt-[10px]">
+                            <div class="flex gap-x-[5px] items-center mb-[15px] h-[30px] sm:h-[20px] sm:mb-[15px]">
+                                <img class="h-[30px] w-[30px] sm:h-[20px] sm:w-[20px]" src="./icons/Chat30.png"
                                      alt="chat icon">
 
                                 <div class="">
-                                    <img class="h-[30px] w-[30px]" src="icons/Heart30.png"
+                                    <img class="h-[30px] w-[30px] sm:h-[20px] sm:w-[20px]" src="icons/Heart30.png"
                                          alt="heart icon">
                                 </div>
-                                <p class="ml-[73px] mt-[6px] text-sm text-main_text_color">149 views</p>
+                                <p class="ml-[73px] mt-[6px] text-sm text-main_text_color sm:ml-[45px] sm:text-[10px]">
+                                    149 views</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="flex w-[244px] h-[374px] flex-col justify-center rounded-[10px]">
-                    <img class="h-[137px]" src="./images/phone.png" alt="phone">
-                    <div class="pr-[20px] pl-[20px] bg-white w-[244px] h-[258px] rounded-[10px]">
-                        <h3 class="w-[204px] text-base font-bold leading-[18px] mt-[25px]">Google Pixel 7 Pro 128gb |
+                <div class="flex w-[244px] h-[374px] flex-col justify-center rounded-[10px] sm:w-[164px] sm:h-[242px]">
+                    <img class="h-[137px] sm:h-[92px]" src="./images/phone.png" alt="phone">
+                    <div class="pr-[20px] pl-[20px] bg-white w-[244px] h-[237px] rounded-b-[10px] sm:pr-[13px] sm:pl-[13px] sm:w-[164px] sm:h-[150px]">
+                        <h3 class="w-[204px] text-base font-bold leading-[18px] mt-[25px] sm:mt-[15px] sm:w-[138px] sm:text-[11px] sm:leading-[12.65px]">
+                            Google Pixel 7 Pro 128gb |
                             pixel
                             watch new g...</h3>
-                        <div class="flex mt-[20px] items-center leading-4 text-sm">
-                            <img class="w-[10px] h-[12px] mr-[8px]" src="./icons/Location.png" alt="location">
-                            <p>New York, NY, USA</p>
+                        <div class="flex mt-[20px] items-center sm:mt-[10px]">
+                            <img class="w-[10px] h-[12px] mr-[8px] sm:w-[6.87px] sm:h-[8.25px]"
+                                 src="./icons/Location.png" alt="location">
+                            <p class="leading-4 text-sm sm:leading-[11.05.px] sm:text-[10px] ">New York, NY, USA</p>
                         </div>
-                        <div class="flex flex mt-[10px] items-center leading-4 text-sm">
-                            <img class="w-[12.33px] h-[12.33px] mr-[6.83px]" src="./icons/TimeCircle.png" alt="time">
-                            <p>29 Leaflet 5:46 pm</p>
+                        <div class="flex flex mt-[10px] items-center sm:mt-0 ">
+                            <img class="w-[8.48px] h-[8.48px] mr-[6.83px]" src="./icons/TimeCircle.png" alt="time">
+                            <p class="leading-4 text-sm sm:leading-[11.05.px] sm:text-[10px] ">29 Leaflet 5:46 pm</p>
                         </div>
-                        <p class="text-base font-bold mt-[15px] h-[18px]">$871,000</p>
-                        <div class="w-[204px] h-[2px] bg-form_color mt-[19px]"></div>
-                        <div class="mt-[15px]">
-                            <div class="flex gap-x-[5px] items-center mb-[15px] h-[30px]">
-                                <img class="h-[30px] w-[30px] " src="./icons/Chat30.png"
+                        <p class="text-base font-bold mt-[15px] h-[18px] sm:mt-[10px] sm:text-[11px] sm:leading-[12.65px]">
+                            $871,000</p>
+                        <div class="w-[204px] h-[2px] bg-form_color mt-[19px] sm:w-[138px] sm:h-[1px] sm:mt-[0px]"></div>
+                        <div class="mt-[15px] sm:mt-[10px]">
+                            <div class="flex gap-x-[5px] items-center mb-[15px] h-[30px] sm:h-[20px] sm:mb-[15px]">
+                                <img class="h-[30px] w-[30px] sm:h-[20px] sm:w-[20px]" src="./icons/Chat30.png"
                                      alt="chat icon">
 
                                 <div class="">
-                                    <img class="h-[30px] w-[30px]" src="icons/Heart30.png"
+                                    <img class="h-[30px] w-[30px] sm:h-[20px] sm:w-[20px]" src="icons/Heart30.png"
                                          alt="heart icon">
                                 </div>
-                                <p class="ml-[73px] mt-[6px] text-sm text-main_text_color">149 views</p>
+                                <p class="ml-[73px] mt-[6px] text-sm text-main_text_color sm:ml-[45px] sm:text-[10px]">
+                                    149 views</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="flex w-[244px] h-[374px] flex-col justify-center rounded-[10px]">
-                    <img class="h-[137px]" src="./images/phone.png" alt="phone">
-                    <div class="pr-[20px] pl-[20px] bg-white w-[244px] h-[258px] rounded-[10px]">
-                        <h3 class="w-[204px] text-base font-bold leading-[18px] mt-[25px]">Google Pixel 7 Pro 128gb |
+                <div class="flex w-[244px] h-[374px] flex-col justify-center rounded-[10px] sm:w-[164px] sm:h-[242px]">
+                    <img class="h-[137px] sm:h-[92px]" src="./images/phone.png" alt="phone">
+                    <div class="pr-[20px] pl-[20px] bg-white w-[244px] h-[237px] rounded-b-[10px] sm:pr-[13px] sm:pl-[13px] sm:w-[164px] sm:h-[150px]">
+                        <h3 class="w-[204px] text-base font-bold leading-[18px] mt-[25px] sm:mt-[15px] sm:w-[138px] sm:text-[11px] sm:leading-[12.65px]">
+                            Google Pixel 7 Pro 128gb |
                             pixel
                             watch new g...</h3>
-                        <div class="flex mt-[20px] items-center leading-4 text-sm">
-                            <img class="w-[10px] h-[12px] mr-[8px]" src="./icons/Location.png" alt="location">
-                            <p>New York, NY, USA</p>
+                        <div class="flex mt-[20px] items-center sm:mt-[10px]">
+                            <img class="w-[10px] h-[12px] mr-[8px] sm:w-[6.87px] sm:h-[8.25px]"
+                                 src="./icons/Location.png" alt="location">
+                            <p class="leading-4 text-sm sm:leading-[11.05.px] sm:text-[10px] ">New York, NY, USA</p>
                         </div>
-                        <div class="flex flex mt-[10px] items-center leading-4 text-sm">
-                            <img class="w-[12.33px] h-[12.33px] mr-[6.83px]" src="./icons/TimeCircle.png" alt="time">
-                            <p>29 Leaflet 5:46 pm</p>
+                        <div class="flex flex mt-[10px] items-center sm:mt-0 ">
+                            <img class="w-[8.48px] h-[8.48px] mr-[6.83px]" src="./icons/TimeCircle.png" alt="time">
+                            <p class="leading-4 text-sm sm:leading-[11.05.px] sm:text-[10px] ">29 Leaflet 5:46 pm</p>
                         </div>
-                        <p class="text-base font-bold mt-[15px] h-[18px]">$871,000</p>
-                        <div class="w-[204px] h-[2px] bg-form_color mt-[19px]"></div>
-                        <div class="mt-[15px]">
-                            <div class="flex gap-x-[5px] items-center mb-[15px] h-[30px]">
-                                <img class="h-[30px] w-[30px] " src="./icons/Chat30.png"
+                        <p class="text-base font-bold mt-[15px] h-[18px] sm:mt-[10px] sm:text-[11px] sm:leading-[12.65px]">
+                            $871,000</p>
+                        <div class="w-[204px] h-[2px] bg-form_color mt-[19px] sm:w-[138px] sm:h-[1px] sm:mt-[0px]"></div>
+                        <div class="mt-[15px] sm:mt-[10px]">
+                            <div class="flex gap-x-[5px] items-center mb-[15px] h-[30px] sm:h-[20px] sm:mb-[15px]">
+                                <img class="h-[30px] w-[30px] sm:h-[20px] sm:w-[20px]" src="./icons/Chat30.png"
                                      alt="chat icon">
 
                                 <div class="">
-                                    <img class="h-[30px] w-[30px]" src="icons/Heart30.png"
+                                    <img class="h-[30px] w-[30px] sm:h-[20px] sm:w-[20px]" src="icons/Heart30.png"
                                          alt="heart icon">
                                 </div>
-                                <p class="ml-[73px] mt-[6px] text-sm text-main_text_color">149 views</p>
+                                <p class="ml-[73px] mt-[6px] text-sm text-main_text_color sm:ml-[45px] sm:text-[10px]">
+                                    149 views</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="flex w-[244px] h-[374px] flex-col justify-center rounded-[10px]">
-                    <img class="h-[137px]" src="./images/phone.png" alt="phone">
-                    <div class="pr-[20px] pl-[20px] bg-white w-[244px] h-[258px] rounded-[10px]">
-                        <h3 class="w-[204px] text-base font-bold leading-[18px] mt-[25px]">Google Pixel 7 Pro 128gb |
+                <div class="flex w-[244px] h-[374px] flex-col justify-center rounded-[10px] sm:w-[164px] sm:h-[242px] sm:hidden">
+                    <img class="h-[137px] sm:h-[92px]" src="./images/phone.png" alt="phone">
+                    <div class="pr-[20px] pl-[20px] bg-white w-[244px] h-[237px] rounded-b-[10px] sm:pr-[13px] sm:pl-[13px] sm:w-[164px] sm:h-[150px]">
+                        <h3 class="w-[204px] text-base font-bold leading-[18px] mt-[25px] sm:mt-[15px] sm:w-[138px] sm:text-[11px] sm:leading-[12.65px]">
+                            Google Pixel 7 Pro 128gb |
                             pixel
                             watch new g...</h3>
-                        <div class="flex mt-[20px] items-center leading-4 text-sm">
-                            <img class="w-[10px] h-[12px] mr-[8px]" src="./icons/Location.png" alt="location">
-                            <p>New York, NY, USA</p>
+                        <div class="flex mt-[20px] items-center sm:mt-[10px]">
+                            <img class="w-[10px] h-[12px] mr-[8px] sm:w-[6.87px] sm:h-[8.25px]"
+                                 src="./icons/Location.png" alt="location">
+                            <p class="leading-4 text-sm sm:leading-[11.05.px] sm:text-[10px] ">New York, NY, USA</p>
                         </div>
-                        <div class="flex flex mt-[10px] items-center leading-4 text-sm">
-                            <img class="w-[12.33px] h-[12.33px] mr-[6.83px]" src="./icons/TimeCircle.png" alt="time">
-                            <p>29 Leaflet 5:46 pm</p>
+                        <div class="flex flex mt-[10px] items-center sm:mt-0 ">
+                            <img class="w-[8.48px] h-[8.48px] mr-[6.83px]" src="./icons/TimeCircle.png" alt="time">
+                            <p class="leading-4 text-sm sm:leading-[11.05.px] sm:text-[10px] ">29 Leaflet 5:46 pm</p>
                         </div>
-                        <p class="text-base font-bold mt-[15px] h-[18px]">$871,000</p>
-                        <div class="w-[204px] h-[2px] bg-form_color mt-[19px]"></div>
-                        <div class="mt-[15px]">
-                            <div class="flex gap-x-[5px] items-center mb-[15px] h-[30px]">
-                                <img class="h-[30px] w-[30px] " src="./icons/Chat30.png"
+                        <p class="text-base font-bold mt-[15px] h-[18px] sm:mt-[10px] sm:text-[11px] sm:leading-[12.65px]">
+                            $871,000</p>
+                        <div class="w-[204px] h-[2px] bg-form_color mt-[19px] sm:w-[138px] sm:h-[1px] sm:mt-[0px]"></div>
+                        <div class="mt-[15px] sm:mt-[10px]">
+                            <div class="flex gap-x-[5px] items-center mb-[15px] h-[30px] sm:h-[20px] sm:mb-[15px]">
+                                <img class="h-[30px] w-[30px] sm:h-[20px] sm:w-[20px]" src="./icons/Chat30.png"
                                      alt="chat icon">
 
                                 <div class="">
-                                    <img class="h-[30px] w-[30px]" src="icons/Heart30.png"
+                                    <img class="h-[30px] w-[30px] sm:h-[20px] sm:w-[20px]" src="icons/Heart30.png"
                                          alt="heart icon">
                                 </div>
-                                <p class="ml-[73px] mt-[6px] text-sm text-main_text_color">149 views</p>
+                                <p class="ml-[73px] mt-[6px] text-sm text-main_text_color sm:ml-[45px] sm:text-[10px]">
+                                    149 views</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="flex w-[244px] h-[374px] flex-col justify-center rounded-[10px]">
-                    <img class="h-[137px]" src="./images/phone.png" alt="phone">
-                    <div class="pr-[20px] pl-[20px] bg-white w-[244px] h-[258px] rounded-[10px]">
-                        <h3 class="w-[204px] text-base font-bold leading-[18px] mt-[25px]">Google Pixel 7 Pro 128gb |
+                <div class="flex w-[244px] h-[374px] flex-col justify-center rounded-[10px] sm:w-[164px] sm:h-[242px] sm:hidden">
+                    <img class="h-[137px] sm:h-[92px]" src="./images/phone.png" alt="phone">
+                    <div class="pr-[20px] pl-[20px] bg-white w-[244px] h-[237px] rounded-b-[10px] sm:pr-[13px] sm:pl-[13px] sm:w-[164px] sm:h-[150px]">
+                        <h3 class="w-[204px] text-base font-bold leading-[18px] mt-[25px] sm:mt-[15px] sm:w-[138px] sm:text-[11px] sm:leading-[12.65px]">
+                            Google Pixel 7 Pro 128gb |
                             pixel
                             watch new g...</h3>
-                        <div class="flex mt-[20px] items-center leading-4 text-sm">
-                            <img class="w-[10px] h-[12px] mr-[8px]" src="./icons/Location.png" alt="location">
-                            <p>New York, NY, USA</p>
+                        <div class="flex mt-[20px] items-center sm:mt-[10px]">
+                            <img class="w-[10px] h-[12px] mr-[8px] sm:w-[6.87px] sm:h-[8.25px]"
+                                 src="./icons/Location.png" alt="location">
+                            <p class="leading-4 text-sm sm:leading-[11.05.px] sm:text-[10px] ">New York, NY, USA</p>
                         </div>
-                        <div class="flex flex mt-[10px] items-center leading-4 text-sm">
-                            <img class="w-[12.33px] h-[12.33px] mr-[6.83px]" src="./icons/TimeCircle.png" alt="time">
-                            <p>29 Leaflet 5:46 pm</p>
+                        <div class="flex flex mt-[10px] items-center sm:mt-0 ">
+                            <img class="w-[8.48px] h-[8.48px] mr-[6.83px]" src="./icons/TimeCircle.png" alt="time">
+                            <p class="leading-4 text-sm sm:leading-[11.05.px] sm:text-[10px] ">29 Leaflet 5:46 pm</p>
                         </div>
-                        <p class="text-base font-bold mt-[15px] h-[18px]">$871,000</p>
-                        <div class="w-[204px] h-[2px] bg-form_color mt-[19px]"></div>
-                        <div class="mt-[15px]">
-                            <div class="flex gap-x-[5px] items-center mb-[15px] h-[30px]">
-                                <img class="h-[30px] w-[30px] " src="./icons/Chat30.png"
+                        <p class="text-base font-bold mt-[15px] h-[18px] sm:mt-[10px] sm:text-[11px] sm:leading-[12.65px]">
+                            $871,000</p>
+                        <div class="w-[204px] h-[2px] bg-form_color mt-[19px] sm:w-[138px] sm:h-[1px] sm:mt-[0px]"></div>
+                        <div class="mt-[15px] sm:mt-[10px]">
+                            <div class="flex gap-x-[5px] items-center mb-[15px] h-[30px] sm:h-[20px] sm:mb-[15px]">
+                                <img class="h-[30px] w-[30px] sm:h-[20px] sm:w-[20px]" src="./icons/Chat30.png"
                                      alt="chat icon">
 
                                 <div class="">
-                                    <img class="h-[30px] w-[30px]" src="icons/Heart30.png"
+                                    <img class="h-[30px] w-[30px] sm:h-[20px] sm:w-[20px]" src="icons/Heart30.png"
                                          alt="heart icon">
                                 </div>
-                                <p class="ml-[73px] mt-[6px] text-sm text-main_text_color">149 views</p>
+                                <p class="ml-[73px] mt-[6px] text-sm text-main_text_color sm:ml-[45px] sm:text-[10px]">
+                                    149 views</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="flex w-[244px] h-[374px] flex-col justify-center rounded-[10px]">
-                    <img class="h-[137px]" src="./images/phone.png" alt="phone">
-                    <div class="pr-[20px] pl-[20px] bg-white w-[244px] h-[258px] rounded-[10px]">
-                        <h3 class="w-[204px] text-base font-bold leading-[18px] mt-[25px]">Google Pixel 7 Pro 128gb |
+                <div class="flex w-[244px] h-[374px] flex-col justify-center rounded-[10px] sm:w-[164px] sm:h-[242px] sm:hidden">
+                    <img class="h-[137px] sm:h-[92px]" src="./images/phone.png" alt="phone">
+                    <div class="pr-[20px] pl-[20px] bg-white w-[244px] h-[237px] rounded-b-[10px] sm:pr-[13px] sm:pl-[13px] sm:w-[164px] sm:h-[150px]">
+                        <h3 class="w-[204px] text-base font-bold leading-[18px] mt-[25px] sm:mt-[15px] sm:w-[138px] sm:text-[11px] sm:leading-[12.65px]">
+                            Google Pixel 7 Pro 128gb |
                             pixel
                             watch new g...</h3>
-                        <div class="flex mt-[20px] items-center leading-4 text-sm">
-                            <img class="w-[10px] h-[12px] mr-[8px]" src="./icons/Location.png" alt="location">
-                            <p>New York, NY, USA</p>
+                        <div class="flex mt-[20px] items-center sm:mt-[10px]">
+                            <img class="w-[10px] h-[12px] mr-[8px] sm:w-[6.87px] sm:h-[8.25px]"
+                                 src="./icons/Location.png" alt="location">
+                            <p class="leading-4 text-sm sm:leading-[11.05.px] sm:text-[10px] ">New York, NY, USA</p>
                         </div>
-                        <div class="flex flex mt-[10px] items-center leading-4 text-sm">
-                            <img class="w-[12.33px] h-[12.33px] mr-[6.83px]" src="./icons/TimeCircle.png" alt="time">
-                            <p>29 Leaflet 5:46 pm</p>
+                        <div class="flex flex mt-[10px] items-center sm:mt-0 ">
+                            <img class="w-[8.48px] h-[8.48px] mr-[6.83px]" src="./icons/TimeCircle.png" alt="time">
+                            <p class="leading-4 text-sm sm:leading-[11.05.px] sm:text-[10px] ">29 Leaflet 5:46 pm</p>
                         </div>
-                        <p class="text-base font-bold mt-[15px] h-[18px]">$871,000</p>
-                        <div class="w-[204px] h-[2px] bg-form_color mt-[19px]"></div>
-                        <div class="mt-[15px]">
-                            <div class="flex gap-x-[5px] items-center mb-[15px] h-[30px]">
-                                <img class="h-[30px] w-[30px] " src="./icons/Chat30.png"
+                        <p class="text-base font-bold mt-[15px] h-[18px] sm:mt-[10px] sm:text-[11px] sm:leading-[12.65px]">
+                            $871,000</p>
+                        <div class="w-[204px] h-[2px] bg-form_color mt-[19px] sm:w-[138px] sm:h-[1px] sm:mt-[0px]"></div>
+                        <div class="mt-[15px] sm:mt-[10px]">
+                            <div class="flex gap-x-[5px] items-center mb-[15px] h-[30px] sm:h-[20px] sm:mb-[15px]">
+                                <img class="h-[30px] w-[30px] sm:h-[20px] sm:w-[20px]" src="./icons/Chat30.png"
                                      alt="chat icon">
 
                                 <div class="">
-                                    <img class="h-[30px] w-[30px]" src="icons/Heart30.png"
+                                    <img class="h-[30px] w-[30px] sm:h-[20px] sm:w-[20px]" src="icons/Heart30.png"
                                          alt="heart icon">
                                 </div>
-                                <p class="ml-[73px] mt-[6px] text-sm text-main_text_color">149 views</p>
+                                <p class="ml-[73px] mt-[6px] text-sm text-main_text_color sm:ml-[45px] sm:text-[10px]">
+                                    149 views</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="flex w-[244px] h-[374px] flex-col justify-center rounded-[10px]">
-                    <img class="h-[137px]" src="./images/phone.png" alt="phone">
-                    <div class="pr-[20px] pl-[20px] bg-white w-[244px] h-[258px] rounded-[10px]">
-                        <h3 class="w-[204px] text-base font-bold leading-[18px] mt-[25px]">Google Pixel 7 Pro 128gb |
+                <div class="flex w-[244px] h-[374px] flex-col justify-center rounded-[10px] sm:w-[164px] sm:h-[242px] sm:hidden">
+                    <img class="h-[137px] sm:h-[92px]" src="./images/phone.png" alt="phone">
+                    <div class="pr-[20px] pl-[20px] bg-white w-[244px] h-[237px] rounded-b-[10px] sm:pr-[13px] sm:pl-[13px] sm:w-[164px] sm:h-[150px]">
+                        <h3 class="w-[204px] text-base font-bold leading-[18px] mt-[25px] sm:mt-[15px] sm:w-[138px] sm:text-[11px] sm:leading-[12.65px]">
+                            Google Pixel 7 Pro 128gb |
                             pixel
                             watch new g...</h3>
-                        <div class="flex mt-[20px] items-center leading-4 text-sm">
-                            <img class="w-[10px] h-[12px] mr-[8px]" src="./icons/Location.png" alt="location">
-                            <p>New York, NY, USA</p>
+                        <div class="flex mt-[20px] items-center sm:mt-[10px]">
+                            <img class="w-[10px] h-[12px] mr-[8px] sm:w-[6.87px] sm:h-[8.25px]"
+                                 src="./icons/Location.png" alt="location">
+                            <p class="leading-4 text-sm sm:leading-[11.05.px] sm:text-[10px] ">New York, NY, USA</p>
                         </div>
-                        <div class="flex flex mt-[10px] items-center leading-4 text-sm">
-                            <img class="w-[12.33px] h-[12.33px] mr-[6.83px]" src="./icons/TimeCircle.png" alt="time">
-                            <p>29 Leaflet 5:46 pm</p>
+                        <div class="flex flex mt-[10px] items-center sm:mt-0 ">
+                            <img class="w-[8.48px] h-[8.48px] mr-[6.83px]" src="./icons/TimeCircle.png" alt="time">
+                            <p class="leading-4 text-sm sm:leading-[11.05.px] sm:text-[10px] ">29 Leaflet 5:46 pm</p>
                         </div>
-                        <p class="text-base font-bold mt-[15px] h-[18px]">$871,000</p>
-                        <div class="w-[204px] h-[2px] bg-form_color mt-[19px]"></div>
-                        <div class="mt-[15px]">
-                            <div class="flex gap-x-[5px] items-center mb-[15px] h-[30px]">
-                                <img class="h-[30px] w-[30px] " src="./icons/Chat30.png"
+                        <p class="text-base font-bold mt-[15px] h-[18px] sm:mt-[10px] sm:text-[11px] sm:leading-[12.65px]">
+                            $871,000</p>
+                        <div class="w-[204px] h-[2px] bg-form_color mt-[19px] sm:w-[138px] sm:h-[1px] sm:mt-[0px]"></div>
+                        <div class="mt-[15px] sm:mt-[10px]">
+                            <div class="flex gap-x-[5px] items-center mb-[15px] h-[30px] sm:h-[20px] sm:mb-[15px]">
+                                <img class="h-[30px] w-[30px] sm:h-[20px] sm:w-[20px]" src="./icons/Chat30.png"
                                      alt="chat icon">
 
                                 <div class="">
-                                    <img class="h-[30px] w-[30px]" src="icons/Heart30.png"
+                                    <img class="h-[30px] w-[30px] sm:h-[20px] sm:w-[20px]" src="icons/Heart30.png"
                                          alt="heart icon">
                                 </div>
-                                <p class="ml-[73px] mt-[6px] text-sm text-main_text_color">149 views</p>
+                                <p class="ml-[73px] mt-[6px] text-sm text-main_text_color sm:ml-[45px] sm:text-[10px]">
+                                    149 views</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="flex w-[244px] h-[374px] flex-col justify-center rounded-[10px]">
-                    <img class="h-[137px]" src="./images/phone.png" alt="phone">
-                    <div class="pr-[20px] pl-[20px] bg-white w-[244px] h-[258px] rounded-[10px]">
-                        <h3 class="w-[204px] text-base font-bold leading-[18px] mt-[25px]">Google Pixel 7 Pro 128gb |
+                <div class="flex w-[244px] h-[374px] flex-col justify-center rounded-[10px] sm:w-[164px] sm:h-[242px] sm:hidden">
+                    <img class="h-[137px] sm:h-[92px]" src="./images/phone.png" alt="phone">
+                    <div class="pr-[20px] pl-[20px] bg-white w-[244px] h-[237px] rounded-b-[10px] sm:pr-[13px] sm:pl-[13px] sm:w-[164px] sm:h-[150px]">
+                        <h3 class="w-[204px] text-base font-bold leading-[18px] mt-[25px] sm:mt-[15px] sm:w-[138px] sm:text-[11px] sm:leading-[12.65px]">
+                            Google Pixel 7 Pro 128gb |
                             pixel
                             watch new g...</h3>
-                        <div class="flex mt-[20px] items-center leading-4 text-sm">
-                            <img class="w-[10px] h-[12px] mr-[8px]" src="./icons/Location.png" alt="location">
-                            <p>New York, NY, USA</p>
+                        <div class="flex mt-[20px] items-center sm:mt-[10px]">
+                            <img class="w-[10px] h-[12px] mr-[8px] sm:w-[6.87px] sm:h-[8.25px]"
+                                 src="./icons/Location.png" alt="location">
+                            <p class="leading-4 text-sm sm:leading-[11.05.px] sm:text-[10px] ">New York, NY, USA</p>
                         </div>
-                        <div class="flex flex mt-[10px] items-center leading-4 text-sm">
-                            <img class="w-[12.33px] h-[12.33px] mr-[6.83px]" src="./icons/TimeCircle.png" alt="time">
-                            <p>29 Leaflet 5:46 pm</p>
+                        <div class="flex flex mt-[10px] items-center sm:mt-0 ">
+                            <img class="w-[8.48px] h-[8.48px] mr-[6.83px]" src="./icons/TimeCircle.png" alt="time">
+                            <p class="leading-4 text-sm sm:leading-[11.05.px] sm:text-[10px] ">29 Leaflet 5:46 pm</p>
                         </div>
-                        <p class="text-base font-bold mt-[15px] h-[18px]">$871,000</p>
-                        <div class="w-[204px] h-[2px] bg-form_color mt-[19px]"></div>
-                        <div class="mt-[15px]">
-                            <div class="flex gap-x-[5px] items-center mb-[15px] h-[30px]">
-                                <img class="h-[30px] w-[30px] " src="./icons/Chat30.png"
+                        <p class="text-base font-bold mt-[15px] h-[18px] sm:mt-[10px] sm:text-[11px] sm:leading-[12.65px]">
+                            $871,000</p>
+                        <div class="w-[204px] h-[2px] bg-form_color mt-[19px] sm:w-[138px] sm:h-[1px] sm:mt-[0px]"></div>
+                        <div class="mt-[15px] sm:mt-[10px]">
+                            <div class="flex gap-x-[5px] items-center mb-[15px] h-[30px] sm:h-[20px] sm:mb-[15px]">
+                                <img class="h-[30px] w-[30px] sm:h-[20px] sm:w-[20px]" src="./icons/Chat30.png"
                                      alt="chat icon">
 
                                 <div class="">
-                                    <img class="h-[30px] w-[30px]" src="icons/Heart30.png"
+                                    <img class="h-[30px] w-[30px] sm:h-[20px] sm:w-[20px]" src="icons/Heart30.png"
                                          alt="heart icon">
                                 </div>
-                                <p class="ml-[73px] mt-[6px] text-sm text-main_text_color">149 views</p>
+                                <p class="ml-[73px] mt-[6px] text-sm text-main_text_color sm:ml-[45px] sm:text-[10px]">
+                                    149 views</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="flex w-[244px] h-[374px] flex-col justify-center rounded-[10px]">
-                    <img class="h-[137px]" src="./images/phone.png" alt="phone">
-                    <div class="pr-[20px] pl-[20px] bg-white w-[244px] h-[258px] rounded-[10px]">
-                        <h3 class="w-[204px] text-base font-bold leading-[18px] mt-[25px]">Google Pixel 7 Pro 128gb |
+                <div class="flex w-[244px] h-[374px] flex-col justify-center rounded-[10px] sm:w-[164px] sm:h-[242px] sm:hidden">
+                    <img class="h-[137px] sm:h-[92px]" src="./images/phone.png" alt="phone">
+                    <div class="pr-[20px] pl-[20px] bg-white w-[244px] h-[237px] rounded-b-[10px] sm:pr-[13px] sm:pl-[13px] sm:w-[164px] sm:h-[150px]">
+                        <h3 class="w-[204px] text-base font-bold leading-[18px] mt-[25px] sm:mt-[15px] sm:w-[138px] sm:text-[11px] sm:leading-[12.65px]">
+                            Google Pixel 7 Pro 128gb |
                             pixel
                             watch new g...</h3>
-                        <div class="flex mt-[20px] items-center leading-4 text-sm">
-                            <img class="w-[10px] h-[12px] mr-[8px]" src="./icons/Location.png" alt="location">
-                            <p>New York, NY, USA</p>
+                        <div class="flex mt-[20px] items-center sm:mt-[10px]">
+                            <img class="w-[10px] h-[12px] mr-[8px] sm:w-[6.87px] sm:h-[8.25px]"
+                                 src="./icons/Location.png" alt="location">
+                            <p class="leading-4 text-sm sm:leading-[11.05.px] sm:text-[10px] ">New York, NY, USA</p>
                         </div>
-                        <div class="flex flex mt-[10px] items-center leading-4 text-sm">
-                            <img class="w-[12.33px] h-[12.33px] mr-[6.83px]" src="./icons/TimeCircle.png" alt="time">
-                            <p>29 Leaflet 5:46 pm</p>
+                        <div class="flex flex mt-[10px] items-center sm:mt-0 ">
+                            <img class="w-[8.48px] h-[8.48px] mr-[6.83px]" src="./icons/TimeCircle.png" alt="time">
+                            <p class="leading-4 text-sm sm:leading-[11.05.px] sm:text-[10px] ">29 Leaflet 5:46 pm</p>
                         </div>
-                        <p class="text-base font-bold mt-[15px] h-[18px]">$871,000</p>
-                        <div class="w-[204px] h-[2px] bg-form_color mt-[19px]"></div>
-                        <div class="mt-[15px]">
-                            <div class="flex gap-x-[5px] items-center mb-[15px] h-[30px]">
-                                <img class="h-[30px] w-[30px] " src="./icons/Chat30.png"
+                        <p class="text-base font-bold mt-[15px] h-[18px] sm:mt-[10px] sm:text-[11px] sm:leading-[12.65px]">
+                            $871,000</p>
+                        <div class="w-[204px] h-[2px] bg-form_color mt-[19px] sm:w-[138px] sm:h-[1px] sm:mt-[0px]"></div>
+                        <div class="mt-[15px] sm:mt-[10px]">
+                            <div class="flex gap-x-[5px] items-center mb-[15px] h-[30px] sm:h-[20px] sm:mb-[15px]">
+                                <img class="h-[30px] w-[30px] sm:h-[20px] sm:w-[20px]" src="./icons/Chat30.png"
                                      alt="chat icon">
 
                                 <div class="">
-                                    <img class="h-[30px] w-[30px]" src="icons/Heart30.png"
+                                    <img class="h-[30px] w-[30px] sm:h-[20px] sm:w-[20px]" src="icons/Heart30.png"
                                          alt="heart icon">
                                 </div>
-                                <p class="ml-[73px] mt-[6px] text-sm text-main_text_color">149 views</p>
+                                <p class="ml-[73px] mt-[6px] text-sm text-main_text_color sm:ml-[45px] sm:text-[10px]">
+                                    149 views</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="flex w-[244px] h-[374px] flex-col justify-center rounded-[10px]">
-                    <img class="h-[137px]" src="./images/phone.png" alt="phone">
-                    <div class="pr-[20px] pl-[20px] bg-white w-[244px] h-[258px] rounded-[10px]">
-                        <h3 class="w-[204px] text-base font-bold leading-[18px] mt-[25px]">Google Pixel 7 Pro 128gb |
+                <div class="flex w-[244px] h-[374px] flex-col justify-center rounded-[10px] sm:w-[164px] sm:h-[242px] sm:hidden">
+                    <img class="h-[137px] sm:h-[92px]" src="./images/phone.png" alt="phone">
+                    <div class="pr-[20px] pl-[20px] bg-white w-[244px] h-[237px] rounded-b-[10px] sm:pr-[13px] sm:pl-[13px] sm:w-[164px] sm:h-[150px]">
+                        <h3 class="w-[204px] text-base font-bold leading-[18px] mt-[25px] sm:mt-[15px] sm:w-[138px] sm:text-[11px] sm:leading-[12.65px]">
+                            Google Pixel 7 Pro 128gb |
                             pixel
                             watch new g...</h3>
-                        <div class="flex mt-[20px] items-center leading-4 text-sm">
-                            <img class="w-[10px] h-[12px] mr-[8px]" src="./icons/Location.png" alt="location">
-                            <p>New York, NY, USA</p>
+                        <div class="flex mt-[20px] items-center sm:mt-[10px]">
+                            <img class="w-[10px] h-[12px] mr-[8px] sm:w-[6.87px] sm:h-[8.25px]"
+                                 src="./icons/Location.png" alt="location">
+                            <p class="leading-4 text-sm sm:leading-[11.05.px] sm:text-[10px] ">New York, NY, USA</p>
                         </div>
-                        <div class="flex flex mt-[10px] items-center leading-4 text-sm">
-                            <img class="w-[12.33px] h-[12.33px] mr-[6.83px]" src="./icons/TimeCircle.png" alt="time">
-                            <p>29 Leaflet 5:46 pm</p>
+                        <div class="flex flex mt-[10px] items-center sm:mt-0 ">
+                            <img class="w-[8.48px] h-[8.48px] mr-[6.83px]" src="./icons/TimeCircle.png" alt="time">
+                            <p class="leading-4 text-sm sm:leading-[11.05.px] sm:text-[10px] ">29 Leaflet 5:46 pm</p>
                         </div>
-                        <p class="text-base font-bold mt-[15px] h-[18px]">$871,000</p>
-                        <div class="w-[204px] h-[2px] bg-form_color mt-[19px]"></div>
-                        <div class="mt-[15px]">
-                            <div class="flex gap-x-[5px] items-center mb-[15px] h-[30px]">
-                                <img class="h-[30px] w-[30px] " src="./icons/Chat30.png"
+                        <p class="text-base font-bold mt-[15px] h-[18px] sm:mt-[10px] sm:text-[11px] sm:leading-[12.65px]">
+                            $871,000</p>
+                        <div class="w-[204px] h-[2px] bg-form_color mt-[19px] sm:w-[138px] sm:h-[1px] sm:mt-[0px]"></div>
+                        <div class="mt-[15px] sm:mt-[10px]">
+                            <div class="flex gap-x-[5px] items-center mb-[15px] h-[30px] sm:h-[20px] sm:mb-[15px]">
+                                <img class="h-[30px] w-[30px] sm:h-[20px] sm:w-[20px]" src="./icons/Chat30.png"
                                      alt="chat icon">
 
                                 <div class="">
-                                    <img class="h-[30px] w-[30px]" src="icons/Heart30.png"
+                                    <img class="h-[30px] w-[30px] sm:h-[20px] sm:w-[20px]" src="icons/Heart30.png"
                                          alt="heart icon">
                                 </div>
-                                <p class="ml-[73px] mt-[6px] text-sm text-main_text_color">149 views</p>
+                                <p class="ml-[73px] mt-[6px] text-sm text-main_text_color sm:ml-[45px] sm:text-[10px]">
+                                    149 views</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="flex w-[244px] h-[374px] flex-col justify-center rounded-[10px]">
-                    <img class="h-[137px]" src="./images/phone.png" alt="phone">
-                    <div class="pr-[20px] pl-[20px] bg-white w-[244px] h-[258px] rounded-[10px]">
-                        <h3 class="w-[204px] text-base font-bold leading-[18px] mt-[25px]">Google Pixel 7 Pro 128gb |
+                <div class="flex w-[244px] h-[374px] flex-col justify-center rounded-[10px] sm:w-[164px] sm:h-[242px] sm:hidden">
+                    <img class="h-[137px] sm:h-[92px]" src="./images/phone.png" alt="phone">
+                    <div class="pr-[20px] pl-[20px] bg-white w-[244px] h-[237px] rounded-b-[10px] sm:pr-[13px] sm:pl-[13px] sm:w-[164px] sm:h-[150px]">
+                        <h3 class="w-[204px] text-base font-bold leading-[18px] mt-[25px] sm:mt-[15px] sm:w-[138px] sm:text-[11px] sm:leading-[12.65px]">
+                            Google Pixel 7 Pro 128gb |
                             pixel
                             watch new g...</h3>
-                        <div class="flex mt-[20px] items-center leading-4 text-sm">
-                            <img class="w-[10px] h-[12px] mr-[8px]" src="./icons/Location.png" alt="location">
-                            <p>New York, NY, USA</p>
+                        <div class="flex mt-[20px] items-center sm:mt-[10px]">
+                            <img class="w-[10px] h-[12px] mr-[8px] sm:w-[6.87px] sm:h-[8.25px]"
+                                 src="./icons/Location.png" alt="location">
+                            <p class="leading-4 text-sm sm:leading-[11.05.px] sm:text-[10px] ">New York, NY, USA</p>
                         </div>
-                        <div class="flex flex mt-[10px] items-center leading-4 text-sm">
-                            <img class="w-[12.33px] h-[12.33px] mr-[6.83px]" src="./icons/TimeCircle.png" alt="time">
-                            <p>29 Leaflet 5:46 pm</p>
+                        <div class="flex flex mt-[10px] items-center sm:mt-0 ">
+                            <img class="w-[8.48px] h-[8.48px] mr-[6.83px]" src="./icons/TimeCircle.png" alt="time">
+                            <p class="leading-4 text-sm sm:leading-[11.05.px] sm:text-[10px] ">29 Leaflet 5:46 pm</p>
                         </div>
-                        <p class="text-base font-bold mt-[15px] h-[18px]">$871,000</p>
-                        <div class="w-[204px] h-[2px] bg-form_color mt-[19px]"></div>
-                        <div class="mt-[15px]">
-                            <div class="flex gap-x-[5px] items-center mb-[15px] h-[30px]">
-                                <img class="h-[30px] w-[30px] " src="./icons/Chat30.png"
+                        <p class="text-base font-bold mt-[15px] h-[18px] sm:mt-[10px] sm:text-[11px] sm:leading-[12.65px]">
+                            $871,000</p>
+                        <div class="w-[204px] h-[2px] bg-form_color mt-[19px] sm:w-[138px] sm:h-[1px] sm:mt-[0px]"></div>
+                        <div class="mt-[15px] sm:mt-[10px]">
+                            <div class="flex gap-x-[5px] items-center mb-[15px] h-[30px] sm:h-[20px] sm:mb-[15px]">
+                                <img class="h-[30px] w-[30px] sm:h-[20px] sm:w-[20px]" src="./icons/Chat30.png"
                                      alt="chat icon">
 
                                 <div class="">
-                                    <img class="h-[30px] w-[30px]" src="icons/Heart30.png"
+                                    <img class="h-[30px] w-[30px] sm:h-[20px] sm:w-[20px]" src="icons/Heart30.png"
                                          alt="heart icon">
                                 </div>
-                                <p class="ml-[73px] mt-[6px] text-sm text-main_text_color">149 views</p>
+                                <p class="ml-[73px] mt-[6px] text-sm text-main_text_color sm:ml-[45px] sm:text-[10px]">
+                                    149 views</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="flex w-[244px] h-[374px] flex-col justify-center rounded-[10px]">
-                    <img class="h-[137px]" src="./images/phone.png" alt="phone">
-                    <div class="pr-[20px] pl-[20px] bg-white w-[244px] h-[258px] rounded-[10px]">
-                        <h3 class="w-[204px] text-base font-bold leading-[18px] mt-[25px]">Google Pixel 7 Pro 128gb |
+                <div class="flex w-[244px] h-[374px] flex-col justify-center rounded-[10px] sm:w-[164px] sm:h-[242px] sm:hidden">
+                    <img class="h-[137px] sm:h-[92px]" src="./images/phone.png" alt="phone">
+                    <div class="pr-[20px] pl-[20px] bg-white w-[244px] h-[237px] rounded-b-[10px] sm:pr-[13px] sm:pl-[13px] sm:w-[164px] sm:h-[150px]">
+                        <h3 class="w-[204px] text-base font-bold leading-[18px] mt-[25px] sm:mt-[15px] sm:w-[138px] sm:text-[11px] sm:leading-[12.65px]">
+                            Google Pixel 7 Pro 128gb |
                             pixel
                             watch new g...</h3>
-                        <div class="flex mt-[20px] items-center leading-4 text-sm">
-                            <img class="w-[10px] h-[12px] mr-[8px]" src="./icons/Location.png" alt="location">
-                            <p>New York, NY, USA</p>
+                        <div class="flex mt-[20px] items-center sm:mt-[10px]">
+                            <img class="w-[10px] h-[12px] mr-[8px] sm:w-[6.87px] sm:h-[8.25px]"
+                                 src="./icons/Location.png" alt="location">
+                            <p class="leading-4 text-sm sm:leading-[11.05.px] sm:text-[10px] ">New York, NY, USA</p>
                         </div>
-                        <div class="flex flex mt-[10px] items-center leading-4 text-sm">
-                            <img class="w-[12.33px] h-[12.33px] mr-[6.83px]" src="./icons/TimeCircle.png" alt="time">
-                            <p>29 Leaflet 5:46 pm</p>
+                        <div class="flex flex mt-[10px] items-center sm:mt-0 ">
+                            <img class="w-[8.48px] h-[8.48px] mr-[6.83px]" src="./icons/TimeCircle.png" alt="time">
+                            <p class="leading-4 text-sm sm:leading-[11.05.px] sm:text-[10px] ">29 Leaflet 5:46 pm</p>
                         </div>
-                        <p class="text-base font-bold mt-[15px] h-[18px]">$871,000</p>
-                        <div class="w-[204px] h-[2px] bg-form_color mt-[19px]"></div>
-                        <div class="mt-[15px]">
-                            <div class="flex gap-x-[5px] items-center mb-[15px] h-[30px]">
-                                <img class="h-[30px] w-[30px] " src="./icons/Chat30.png"
+                        <p class="text-base font-bold mt-[15px] h-[18px] sm:mt-[10px] sm:text-[11px] sm:leading-[12.65px]">
+                            $871,000</p>
+                        <div class="w-[204px] h-[2px] bg-form_color mt-[19px] sm:w-[138px] sm:h-[1px] sm:mt-[0px]"></div>
+                        <div class="mt-[15px] sm:mt-[10px]">
+                            <div class="flex gap-x-[5px] items-center mb-[15px] h-[30px] sm:h-[20px] sm:mb-[15px]">
+                                <img class="h-[30px] w-[30px] sm:h-[20px] sm:w-[20px]" src="./icons/Chat30.png"
                                      alt="chat icon">
 
                                 <div class="">
-                                    <img class="h-[30px] w-[30px]" src="icons/Heart30.png"
+                                    <img class="h-[30px] w-[30px] sm:h-[20px] sm:w-[20px]" src="icons/Heart30.png"
                                          alt="heart icon">
                                 </div>
-                                <p class="ml-[73px] mt-[6px] text-sm text-main_text_color">149 views</p>
+                                <p class="ml-[73px] mt-[6px] text-sm text-main_text_color sm:ml-[45px] sm:text-[10px]">
+                                    149 views</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="flex w-[244px] h-[374px] flex-col justify-center rounded-[10px]">
-                    <img class="h-[137px]" src="./images/phone.png" alt="phone">
-                    <div class="pr-[20px] pl-[20px] bg-white w-[244px] h-[258px] rounded-[10px]">
-                        <h3 class="w-[204px] text-base font-bold leading-[18px] mt-[25px]">Google Pixel 7 Pro 128gb |
+                <div class="flex w-[244px] h-[374px] flex-col justify-center rounded-[10px] sm:w-[164px] sm:h-[242px] sm:hidden">
+                    <img class="h-[137px] sm:h-[92px]" src="./images/phone.png" alt="phone">
+                    <div class="pr-[20px] pl-[20px] bg-white w-[244px] h-[237px] rounded-b-[10px] sm:pr-[13px] sm:pl-[13px] sm:w-[164px] sm:h-[150px]">
+                        <h3 class="w-[204px] text-base font-bold leading-[18px] mt-[25px] sm:mt-[15px] sm:w-[138px] sm:text-[11px] sm:leading-[12.65px]">
+                            Google Pixel 7 Pro 128gb |
                             pixel
                             watch new g...</h3>
-                        <div class="flex mt-[20px] items-center leading-4 text-sm">
-                            <img class="w-[10px] h-[12px] mr-[8px]" src="./icons/Location.png" alt="location">
-                            <p>New York, NY, USA</p>
+                        <div class="flex mt-[20px] items-center sm:mt-[10px]">
+                            <img class="w-[10px] h-[12px] mr-[8px] sm:w-[6.87px] sm:h-[8.25px]"
+                                 src="./icons/Location.png" alt="location">
+                            <p class="leading-4 text-sm sm:leading-[11.05.px] sm:text-[10px] ">New York, NY, USA</p>
                         </div>
-                        <div class="flex flex mt-[10px] items-center leading-4 text-sm">
-                            <img class="w-[12.33px] h-[12.33px] mr-[6.83px]" src="./icons/TimeCircle.png" alt="time">
-                            <p>29 Leaflet 5:46 pm</p>
+                        <div class="flex flex mt-[10px] items-center sm:mt-0 ">
+                            <img class="w-[8.48px] h-[8.48px] mr-[6.83px]" src="./icons/TimeCircle.png" alt="time">
+                            <p class="leading-4 text-sm sm:leading-[11.05.px] sm:text-[10px] ">29 Leaflet 5:46 pm</p>
                         </div>
-                        <p class="text-base font-bold mt-[15px] h-[18px]">$871,000</p>
-                        <div class="w-[204px] h-[2px] bg-form_color mt-[19px]"></div>
-                        <div class="mt-[15px]">
-                            <div class="flex gap-x-[5px] items-center mb-[15px] h-[30px]">
-                                <img class="h-[30px] w-[30px] " src="./icons/Chat30.png"
+                        <p class="text-base font-bold mt-[15px] h-[18px] sm:mt-[10px] sm:text-[11px] sm:leading-[12.65px]">
+                            $871,000</p>
+                        <div class="w-[204px] h-[2px] bg-form_color mt-[19px] sm:w-[138px] sm:h-[1px] sm:mt-[0px]"></div>
+                        <div class="mt-[15px] sm:mt-[10px]">
+                            <div class="flex gap-x-[5px] items-center mb-[15px] h-[30px] sm:h-[20px] sm:mb-[15px]">
+                                <img class="h-[30px] w-[30px] sm:h-[20px] sm:w-[20px]" src="./icons/Chat30.png"
                                      alt="chat icon">
 
                                 <div class="">
-                                    <img class="h-[30px] w-[30px]" src="icons/Heart30.png"
+                                    <img class="h-[30px] w-[30px] sm:h-[20px] sm:w-[20px]" src="icons/Heart30.png"
                                          alt="heart icon">
                                 </div>
-                                <p class="ml-[73px] mt-[6px] text-sm text-main_text_color">149 views</p>
+                                <p class="ml-[73px] mt-[6px] text-sm text-main_text_color sm:ml-[45px] sm:text-[10px]">
+                                    149 views</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="flex w-[244px] h-[374px] flex-col justify-center rounded-[10px]">
-                    <img class="h-[137px]" src="./images/phone.png" alt="phone">
-                    <div class="pr-[20px] pl-[20px] bg-white w-[244px] h-[258px] rounded-[10px]">
-                        <h3 class="w-[204px] text-base font-bold leading-[18px] mt-[25px]">Google Pixel 7 Pro 128gb |
+                <div class="flex w-[244px] h-[374px] flex-col justify-center rounded-[10px] sm:w-[164px] sm:h-[242px] sm:hidden">
+                    <img class="h-[137px] sm:h-[92px]" src="./images/phone.png" alt="phone">
+                    <div class="pr-[20px] pl-[20px] bg-white w-[244px] h-[237px] rounded-b-[10px] sm:pr-[13px] sm:pl-[13px] sm:w-[164px] sm:h-[150px]">
+                        <h3 class="w-[204px] text-base font-bold leading-[18px] mt-[25px] sm:mt-[15px] sm:w-[138px] sm:text-[11px] sm:leading-[12.65px]">
+                            Google Pixel 7 Pro 128gb |
                             pixel
                             watch new g...</h3>
-                        <div class="flex mt-[20px] items-center leading-4 text-sm">
-                            <img class="w-[10px] h-[12px] mr-[8px]" src="./icons/Location.png" alt="location">
-                            <p>New York, NY, USA</p>
+                        <div class="flex mt-[20px] items-center sm:mt-[10px]">
+                            <img class="w-[10px] h-[12px] mr-[8px] sm:w-[6.87px] sm:h-[8.25px]"
+                                 src="./icons/Location.png" alt="location">
+                            <p class="leading-4 text-sm sm:leading-[11.05.px] sm:text-[10px] ">New York, NY, USA</p>
                         </div>
-                        <div class="flex flex mt-[10px] items-center leading-4 text-sm">
-                            <img class="w-[12.33px] h-[12.33px] mr-[6.83px]" src="./icons/TimeCircle.png" alt="time">
-                            <p>29 Leaflet 5:46 pm</p>
+                        <div class="flex flex mt-[10px] items-center sm:mt-0 ">
+                            <img class="w-[8.48px] h-[8.48px] mr-[6.83px]" src="./icons/TimeCircle.png" alt="time">
+                            <p class="leading-4 text-sm sm:leading-[11.05.px] sm:text-[10px] ">29 Leaflet 5:46 pm</p>
                         </div>
-                        <p class="text-base font-bold mt-[15px] h-[18px]">$871,000</p>
-                        <div class="w-[204px] h-[2px] bg-form_color mt-[19px]"></div>
-                        <div class="mt-[15px]">
-                            <div class="flex gap-x-[5px] items-center mb-[15px] h-[30px]">
-                                <img class="h-[30px] w-[30px] " src="./icons/Chat30.png"
+                        <p class="text-base font-bold mt-[15px] h-[18px] sm:mt-[10px] sm:text-[11px] sm:leading-[12.65px]">
+                            $871,000</p>
+                        <div class="w-[204px] h-[2px] bg-form_color mt-[19px] sm:w-[138px] sm:h-[1px] sm:mt-[0px]"></div>
+                        <div class="mt-[15px] sm:mt-[10px]">
+                            <div class="flex gap-x-[5px] items-center mb-[15px] h-[30px] sm:h-[20px] sm:mb-[15px]">
+                                <img class="h-[30px] w-[30px] sm:h-[20px] sm:w-[20px]" src="./icons/Chat30.png"
                                      alt="chat icon">
 
                                 <div class="">
-                                    <img class="h-[30px] w-[30px]" src="icons/Heart30.png"
+                                    <img class="h-[30px] w-[30px] sm:h-[20px] sm:w-[20px]" src="icons/Heart30.png"
                                          alt="heart icon">
                                 </div>
-                                <p class="ml-[73px] mt-[6px] text-sm text-main_text_color">149 views</p>
+                                <p class="ml-[73px] mt-[6px] text-sm text-main_text_color sm:ml-[45px] sm:text-[10px]">
+                                    149 views</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="flex justify-center">
-                <button class="w-[140px] h-[50px] mt-[35px] bg-button_color_header_main text-white text-center rounded-[5px] font-semibold">
+                <button class="w-[140px] h-[50px] mt-[35px] bg-custom_orange text-white text-center rounded-[5px] font-semibold sm:mt-[30px]">
                     Load more
                 </button>
             </div>
 
-            <div class="h-[442px] mt-[80px] bg-button_color_header_main flex flex-col items-center ">
-                <h2 class="text-center font-extrabold text-5xl text-white mt-[60px]">
-                    <div>Let us help you</div>
-                    <div>Submit your first ad!</div>
+            <div class="h-[442px] mt-[80px] bg-custom_orange flex flex-col items-center lg:mt-[40px] lg:w-full lg:h-[891px] sm:mt-[40px] sm:w-full sm:h-[891px] ">
+                <h2 class="text-center font-extrabold text-5xl text-white mt-[60px] sm:text-[24px] sm:leading-[27px]">
+                    <p>Let us help you</p>
+                    <p>Submit your first ad!</p>
                 </h2>
-                <button class="w-[219px] h-[50px] flex bg-white rounded-[5px] font-semibold items-center justify-center mt-[40px]">
-                    <div class="w-[154px] text-button_color_header_main">Add an advert</div>
-                    <div class="w-[65px] h-[50px] bg-white_gray flex items-center justify-center rounded-[5px]">
-                        <div class="w-[2px] h-[9px] bg-button_color_header_main"></div>
-                        <div class="absolute w-[9px] h-[2px] bg-button_color_header_main"></div>
+                <button class="w-[219px] h-[50px] flex bg-white rounded-[5px] font-semibold items-center justify-center mt-[40px] lg:mt-[30px] sm:mt-[30px]">
+                    <div class="w-[154px] text-custom_orange">Add an advert</div>
+                    <div class="w-[65px] h-[50px] bg-white_gray flex items-center justify-center rounded-r-[5px]">
+                        <div class="w-[2px] h-[11px] bg-custom_orange"></div>
+                        <div class="absolute w-[11px] h-[2px] bg-custom_orange"></div>
                     </div>
                 </button>
-                <div class="mt-[80px] flex justify-evenly gap-[24px]">
-                    <div class="bg-white w-[306px] h-[260px] flex flex-col items-center text-center relative rounded-[10px] ">
+                <div class="mt-[80px] flex justify-evenly gap-[24px] lg:flex-col lg:mt-[50px] lg:gap-[15px] sm:flex-col sm:mt-[50px] sm:gap-[15px]">
+                    <div class="bg-white w-[306px] h-[260px] flex flex-col items-center text-center relative rounded-[10px]">
                         <img class="w-[43.86px] h-[44.01px] mb-[35.77px] mt-[42.15px]" src="./icons/Activity.png"
                              alt="activity icon">
                         <h3 class="text-[18px] font-bold leading-5 text-main_text_color mb-[10px]">Popular choice</h3>
@@ -923,11 +1099,11 @@
                 </div>
             </div>
         </div>
-        <div class="h-[240px] bg-main_bg2"></div>
-        <footer class="bg-main_bg h-[300px]">
-            <div class="flex text-sm text-main_text_color ">
-                <div class="flex flex-col mt-[42px] ml-[312px]">
-                    <img class="w-[130px] h-[28px]" src="./images/Obyavausa.png" alt="logo">
+        <div class="h-[240px] bg-main_bg2 lg:h-[300px] sm:h-[205px]"></div>
+        <footer class="flex flex-col bg-main_bg max-h-fit pb-[10px] ">
+            <div class="flex text-sm text-main_text_color justify-center sm:flex-col lg:justify-start lg:flex-col sm:justify-start xl:ml-[30px]">
+                <div class="flex flex-col lg:ml-[22px] sm:ml-[12px] ">
+                    <img class="mt-[40px]" src="./images/Obyavausa.png" alt="logo" width="130" height="28">
                     <div class="mt-[26px] flex items-center">
                         <img class="w-[11.25px] h-[13.05px]" src="./icons/Location.png" alt="location icon">
                         <p class="ml-[13.38px]">518-520 5th AveNew York, USA</p>
@@ -948,45 +1124,51 @@
                         <img class="w-[35px] h-[35px]" src="./icons/LinkedIN.png" alt="LinkedIN">
                     </div>
                 </div>
+                <div class="flex flex-col ml-[103px] mt-[42px] lg:ml-[12px] lg:mt-[26px] sm:ml-[12px] sm:mt-[26px]">
 
-                <div class="flex flex-col ml-[103px] mt-[52px]">
-                    <div class="flex">
-                        <p class="mb-[26px] pr-[702px]">Categories</p>
-                        <p class="mb-[26px]">Profile</p>
+                    <div class="flex lg:flex-col sm:flex-col">
+                        <div class="flex lg:gap-x-[70px] sm:block">
+                            <div class="flex flex-col gap-y-[11px] mr-[70px] lg:mr-0 lg:mr-[75px]  sm:mr-0">
+                                <p class="mb-[22px] h-[16px]">Categories</p>
+                                <p>Tires, rims and wheels</p>
+                                <p>Children's World</p>
+                                <p>Real Estate</p>
+                                <p>Car</p>
+                                <p>Spare parts for transport</p>
+                            </div>
+                            <div class="flex flex-col gap-y-[11px] mr-[83px] mt-[49px] lg:mr-0 sm:mt-[11px]">
+                                <p>Work</p>
+                                <p>Animals</p>
+                                <p>Home and garden</p>
+                                <p>Electronics</p>
+                                <p>Business and services</p>
+                            </div>
+                        </div>
+                        <div class="flex lg:mt-[50px] sm:mt-0">
+                            <div class="flex flex-col gap-y-[11px] mr-[100px] mt-[49px] lg:mr-[110px] sm:mt-[11px]">
+                                <p>Fashion and style</p>
+                                <p>Hobbies, recreation and sports</p>
+                                <p>I'll give it to you for free</p>
+                                <p>Auto / motorcycle services</p>
+                                <p>Construction</p>
+                            </div>
+                            <div class="flex flex-col gap-y-[11px] sm:hidden ">
+                                <p class="mb-[22px] h-[16px]">Profile</p>
+                                <p>Home page of the site</p>
+                                <p>My profile</p>
+                                <p>Messages</p>
+                                <p>Favorites</p>
+                                <p>Log in</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="flex ">
-                        <div class="flex flex-col gap-y-[11px] mr-[70px] ">
-                            <p>Tires, rims and wheels</p>
-                            <p>Children's World</p>
-                            <p>Real Estate</p>
-                            <p>Car</p>
-                            <p>Spare parts for transport</p>
-                        </div>
-                        <div class="flex flex-col gap-y-[11px] mr-[83px]">
-                            <p>Work</p>
-                            <p>Animals</p>
-                            <p>Home and garden</p>
-                            <p>Electronics</p>
-                            <p>Business and services</p>
-                        </div>
-                        <div class="flex flex-col gap-y-[11px] mr-[142px]">
-                            <p>Fashion and style</p>
-                            <p>Hobbies, recreation and sports</p>
-                            <p>I'll give it to you for free</p>
-                            <p>Auto / motorcycle services</p>
-                            <p>Construction</p>
-                        </div>
-                        <div class="flex flex-col gap-y-[11px]">
-                            <p>Home page of the site</p>
-                            <p>My profile</p>
-                            <p>Messages</p>
-                            <p>Favorites</p>
-                            <p>Log in</p>
-                        </div>
-                    </div>
+
                 </div>
             </div>
-            <div><p class="flex text-sm text-main_text_color justify-center ">@ 2022 Obyavausa - All rights reserved.</p>
+            <div class="flex justify-center lg:justify-start  sm:justify-start pb-[10px] lg:ml-[40px] sm:ml-[40px]">
+                <div class="flex text-sm text-main_text_color mt-[31px] xl:mt-[51px] sm:mt-0 sm:pt-[40px]">@ 2022
+                    Obyavausa - All rights reserved.
+                </div>
             </div>
         </footer>
     </div>
